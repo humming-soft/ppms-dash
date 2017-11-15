@@ -1,0 +1,1477 @@
+
+
+/*
+
+
+color code
+
+
+*/
+
+/*text color
+green, red, red bold*/
+.mrt_colorcode_1 {
+	color: #9f3;
+}
+.mrt_colorcode_2 {
+	color: #f59;
+}
+.mrt_colorcode_3 {
+	color: #f59;
+	font-weight: bold;
+}
+
+/*ball
+green, orange, red*/
+.mrt_colorcode_ball_1 {
+	color: #0f0;
+}
+.mrt_colorcode_ball_2 {
+	color: #fa0;
+}
+.mrt_colorcode_ball_3 {
+	color: #f59;
+}
+
+/*bottom bar
+green, blue, red*/
+.mrt_colorcode_bbar_1 {
+	border-bottom: 2px solid #0f0;
+}
+.mrt_colorcode_bbar_2 {
+	border-bottom: 2px solid #0cf;
+}
+.mrt_colorcode_bbar_3 {
+	border-bottom: 2px solid #f59;
+}
+
+
+
+/*
+
+
+set left / center / right
+
+
+*/
+
+div.portlet_content .set_left {
+	text-align: left;
+}
+div.portlet_content .set_center {
+	text-align: center;
+}
+div.portlet_content .set_right {
+	text-align: right;
+}
+
+
+/*
+
+
+breadcrumb
+
+
+*/
+.custom_breadcrumb {
+	padding: 0 5px;
+	font-size: .9em;
+}
+.custom_breadcrumb a {
+	text-decoration: none;
+	color: #0ff;
+}
+.custom_breadcrumb a:hover {
+	color: #4af;
+}
+.breadcrumb_divider {
+	padding: 0 10px;
+}
+div.custom_breadcrumb div.title {
+	color: #fff;
+	padding: 0 0 5px;
+	font-size: 1.5em;
+	border-bottom: 1px solid #335;
+}
+
+
+/*
+
+
+asof
+
+
+*/
+
+span.plate_asof {
+	padding: 0 0 0 10px;
+	font-size: .8em;
+	color: #fc0;
+}
+
+
+/*
+
+
+portlet_setup
+
+
+*/
+div.portlet {
+	margin: 0;
+	padding: 0;
+}
+
+div.portlet div.content {
+	margin: 5px 5px;
+	border: 1px solid #000;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+div.portlet_title {
+	padding: 5px 10px;
+	font-size: 1em;
+	color: #fff;
+	background: rgba(255,255,255,.3);
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.fa_title_icon {
+	padding: 0 10px 0 0;
+}
+
+.portlet_content {
+}
+
+div#container {
+	color: #fff !important;
+}
+rect.highcharts-background {
+	fill: none !important;
+}
+
+
+
+/*
+
+
+issue
+
+
+*/
+div.portlet_issue div.content {
+	background: #125;
+	border: 3px solid #0cf;
+}
+div.portlet_issue div.portlet_content {
+	padding: 5px 20px;
+}
+div.portlet_issue div.portlet_title {
+	background: #0cf;
+	color: #000;
+	font-weight: bolder;
+	border: 3px solid #0cf;
+}
+
+
+/*
+
+
+info
+
+
+*/
+div.portlet_info div.content {
+	background: #252237;
+}
+div.portlet_info div.portlet_content {
+}
+
+div.portlet_info div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_info div.content div.pc_top {
+	padding: 10px;
+	font-size: 1.5em;
+	text-align: center;
+	border-bottom: 1px solid #669;
+}
+div.portlet_info div.content div.pc_top span.info_subtitle {
+	font-size: .8em;
+}
+div.portlet_info div.content div.pc_bottom {
+	padding: 10px;
+}
+
+div.portlet_info div.content span.info_title {
+	display: block;
+	font-size: 1.5em;
+	text-align: center;
+}
+div.portlet_info div.content span.info_subtitle {
+	display: block;
+	font-size: 1em;
+	text-align: center;
+}
+div.portlet_info div.pc_top span.info_title,
+div.portlet_info div.pc_top span.info_subtitle {
+	color: #fff;
+}
+div.portlet_info div.pc_bottom span.info_title,
+div.portlet_info div.pc_bottom span.info_subtitle {
+	color: #cac;
+}
+
+div.portlet_info span.iv_station {
+	margin: 5px 0;
+	padding: 2px 10px;
+	color: #0ff;
+}
+div.portlet_info span.iv_mspr {
+	margin: 5px 0;
+	padding: 2px 10px;
+	color: #0ff;
+}
+div.portlet_info span.iv_pierchart {
+	color: #0ff;
+}
+
+div.portlet_info span.iv_station i,
+div.portlet_info span.iv_mspr i {
+	padding: 0 10px 0 0;
+}
+
+/*pier chart*/
+div.portlet_info div.pier_chart {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+}
+div.portlet_info span.iv_pierchart:hover {
+	cursor: pointer;
+}
+
+
+
+
+/*
+
+
+progress
+
+
+*/
+div.portlet_progress div.content {
+	background: #252237;
+}
+div.portlet_progress div.portlet_content {
+}
+div.portlet_progress div.portlet_title {
+	color: #fff;
+}
+
+
+/*
+
+
+keydates
+
+
+*/
+div.portlet_keydates div.content {
+	background: #252237;
+}
+div.portlet_keydates div.portlet_content {
+	padding-top: 10px;
+	/*Added by Sebin*/
+	padding-bottom: 10px;
+	padding-right: 10px !important;
+}
+div.portlet_keydates div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_keydates thead {
+	background: #111;
+}
+
+div.portlet_keydates table {
+	font-size: .9em;
+}
+
+/*theader border*/
+div.portlet_keydates table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+}
+div.portlet_keydates table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_keydates table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+
+/*
+
+
+keyaccessdates
+
+
+*/
+div.portlet_keyaccessdates div.content {
+	background: #252237;
+}
+div.portlet_keyaccessdates div.portlet_content {
+	padding-top: 10px;
+}
+div.portlet_keyaccessdates div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_keyaccessdates thead {
+	background: #111;
+}
+
+div.portlet_keyaccessdates table {
+	font-size: .9em;
+}
+
+/*theader border*/
+div.portlet_keyaccessdates table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+}
+div.portlet_keyaccessdates table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_keyaccessdates table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+
+/*
+
+
+kpi
+
+
+*/
+div.portlet_kpi div.content {
+	background: #252237;
+}
+div.portlet_kpi div.portlet_content {
+	padding-top: 10px;
+}
+div.portlet_kpi div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_kpi thead {
+	background: #111;
+}
+
+div.portlet_kpi table {
+	font-size: .9em;
+}
+
+div.portlet_kpi table td.baseline {
+	color: #0f9;
+}
+div.portlet_kpi table td.target {
+	color: #b7f;
+}
+div.portlet_kpi table td.actual{
+	color: #f59;
+	background: rgba(0,0,0,.2);
+}
+div.portlet_kpi table td.shortfall {
+	color: #ff0;
+}
+
+/*theader border*/
+div.portlet_kpi table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+}
+div.portlet_kpi table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_kpi table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+
+/*
+
+
+hsse
+
+
+*/
+div.portlet_hsse div.content {
+	background: #252237;
+}
+div.portlet_hsse div.portlet_content {
+	padding-top: 10px;
+}
+div.portlet_hsse div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_hsse thead {
+	background: #111;
+}
+
+div.portlet_hsse table {
+	font-size: .9em;
+}
+
+/*theader border*/
+div.portlet_hsse table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+}
+div.portlet_hsse table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_hsse table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+
+/*
+
+
+images
+
+
+*/
+div.portlet_images div.content {
+	background: #252237;
+}
+div.portlet_images div.portlet_content {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	/*Commented By Sebin*/
+	height: 439px;
+}
+div.portlet_images div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_images div.halfdonut span {
+	display: block;
+	border-top: 1px solid #669;
+	text-align: center;
+}
+
+
+/*
+
+
+scurve
+
+
+*/
+
+div.portlet_scurve div.content {
+	background: #252237;
+}
+
+div.portlet_scurve_data div.row div.item {
+	padding: 3px;
+}
+
+span.item_title {
+	display: block;
+	font-size: .8em;
+	color: #ddf;
+}
+span.item_title_variance {
+	display: block;
+	font-size: .8em;
+	color: #aaa;
+}
+
+span.item_value {
+	display: block;
+	font-size: 1em;
+	color: #fff;
+}
+
+div.psd_data_type1 {
+	padding: 5px 10px !important;
+	background: rgba(255,255,255,.1);
+}
+div.psd_data_type2 {
+	padding: 5px 10px !important;
+	background: rgba(255,255,255,.15);
+}
+
+span.iv_early {
+	padding: 0 0 0 5px;
+	border-left: 3px solid #9f3;
+}
+span.iv_actual {
+	padding: 0 0 0 5px;
+	border-left: 3px solid #f59;
+}
+span.iv_late {
+	padding: 0 0 0 5px;
+	border-left: 3px solid #0cf;
+}
+span.iv_early_variance {
+	padding: 0 0 0 10px;
+	border-left: 3px solid #9f3;
+}
+span.iv_late_variance {
+	padding: 0 0 0 10px;
+	border-left: 3px solid #0ff;
+}
+
+span.iv_baseline {
+	padding: 0 0 0 5px;
+	border-left: 3px solid #0f9;
+}
+span.iv_kpitarget {
+	padding: 0 0 0 5px;
+	border-left: 3px solid #b7f;
+}
+span.iv_shortfall {
+	padding: 0 0 0 5px;
+	border-left: 3px solid #ff0;
+}
+span.iv_actualprogress {
+	padding: 0 0 0 5px;
+	border-left: 3px solid #f60;
+}
+
+span.scurve_arrow {
+	padding: 0 5px;
+	font-size: 1.2em;
+	display: block;
+	position: absolute;
+	top: 9px;
+	right: 12px;
+	border-radius: 5px;
+	background: #113;
+}
+span.scurve_arrow_up {
+	color: #9f3;
+}
+span.scurve_arrow_down {
+	color: #f59;
+}
+
+
+/*
+
+
+summary
+
+
+*/
+div.portlet_summary div.content {
+	background: #252237;
+}
+div.portlet_summary div.portlet_content {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div.portlet_summary div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_summary table {
+	font-size: .9em;
+}
+
+div.portlet_summary table thead {
+	background: #000;
+	vertical-align: top;
+}
+
+/*theader border*/
+div.portlet_summary table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+	text-align: center;
+}
+div.portlet_summary table th:first-child {
+	text-align: left;
+}
+div.portlet_summary table th.mrt_colorcode_bbar_1 {
+	border-left: 2px solid #223;
+	border-right: 2px solid #223;
+	background: rgba(255,255,255,.1);
+	border-bottom: 2px solid #0f0 !important;
+}
+div.portlet_summary table th.mrt_colorcode_bbar_2 {
+	border-left: 2px solid #223;
+	border-right: 2px solid #223;
+	background: rgba(255,255,255,.1);
+	border-bottom: 2px solid #0cf !important;
+}
+div.portlet_summary table th.mrt_colorcode_bbar_3 {
+	border-left: 2px solid #223;
+	border-right: 2px solid #223;
+	background: rgba(255,255,255,.1);
+	border-bottom: 2px solid #f59 !important;
+}
+div.portlet_summary table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_summary table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+div.portlet_summary table td {
+	font-size: 1.4em;
+}
+
+div.portlet_summary table.text_sm td {
+	font-size: 1em;
+}
+
+/*value color*/
+div.portlet_summary table td.val_checkbox,
+div.portlet_summary table td.val_early,
+div.portlet_summary table td.val_late,
+div.portlet_summary table td.val_actual,
+div.portlet_summary table td.val_varearly,
+div.portlet_summary table td.val_varlate,
+div.portlet_summary table td.ball_indicator {
+	text-align: center;
+}
+
+
+
+
+div.portlet_summary table td.val_early,
+div.portlet_summary table td.val_varearly {
+	color: #0f0;
+}
+div.portlet_summary table td.val_late,
+div.portlet_summary table td.val_varlate {
+	color: #0cf;
+}
+div.portlet_summary table td.val_actual {
+	color: #f59;
+}
+
+/*button*/
+div.portlet_summary div.theader_button {
+	text-align: right;
+	padding: 0 0 10px;
+}
+
+
+/*
+
+
+comparison
+
+
+*/
+
+/*main frame*/
+div.portlet_comparison > div.content {
+	background: #222 !important;
+	border-left: 3px solid #669;
+	border-top-left-radius: 3px;;
+}
+
+div.portlet_comparison > div.content > div.portlet_title {
+	background: #669 !important;
+	color: #fff;
+}
+
+/*portlet inside main frame*/
+div.portlet_comparison div.content {
+	background: #252237;
+	border: 1px solid #111;
+}
+div.portlet_comparison div.portlet_content {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div.portlet_comparison div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_comparison div.halfdonut span {
+	display: block;
+	border-top: 1px solid #669;
+	text-align: center;
+}
+
+
+
+/*
+
+
+portlet_procurement_work_package
+
+
+*/
+div.portlet_procurement_work_package div.content {
+	background: #252237;
+}
+div.portlet_procurement_work_package div.portlet_content {
+}
+div.portlet_procurement_work_package div.portlet_title {
+	color: #fff;
+}
+
+
+
+/*
+
+
+portlet_procurement_contract_awarded
+
+
+*/
+
+div.portlet_procurement_contract_awarded div.content {
+	background: #252237;
+}
+
+
+/*
+
+
+portlet_generate_report
+
+
+*/
+
+div.portlet_generate_report div.content {
+	background: #252237;
+}
+div.portlet_generate_report div.portlet_content {
+	padding-top: 10px;
+}
+div.portlet_generate_report div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_generate_report thead {
+	background: #111;
+}
+
+div.portlet_generate_report table {
+	font-size: .9em;
+}
+
+div.portlet_generate_report table th:first-child {
+	width: 300px;
+}
+
+div.portlet_generate_report a i {
+	color: #fff;
+}
+
+/*theader border*/
+div.portlet_generate_report table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+}
+div.portlet_generate_report table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_generate_report table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+/*the rest*/
+div.portlet_generate_report table thead tr:last-child th {
+	font-style: italic;
+	background: #333;
+}
+div.portlet_generate_report table thead tr:last-child th:first-child {
+	background: #34a;
+}
+div.portlet_generate_report table thead th:first-child {
+	background: #46c;
+}
+div.portlet_generate_report table tbody td:first-child {
+	background: #335;
+}
+
+div.portlet_generate_report div.generate_button {
+	padding: 10px 20px 50px;
+}
+div.portlet_generate_report div.generate_button span {
+	padding: 0 3px;
+}
+
+
+
+
+/*
+
+
+portlet_tunnel_progress
+
+
+*/
+
+
+div.portlet_tunnel_progress ul.nav {
+	border-bottom: 2px solid rgba(200,200,255,.3);
+}
+div.portlet_tunnel_progress ul.nav li a:hover {
+	background: rgba(255,255,255,.1);
+	border: 1px solid rgba(255,255,255,.1);
+	color: #fff;
+}
+div.portlet_tunnel_progress ul.nav li.active a {
+	background: rgba(200,200,255,.5);
+	border: 1px solid rgba(200,200,255,.5);
+	color: #fff;
+	outline: 0;
+}
+
+div.portlet_tunnel_progress div.content {
+	background: #252237;
+}
+div.portlet_tunnel_progress div.portlet_content {
+	padding-top: 10px;
+}
+div.portlet_tunnel_progress div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_tunnel_progress thead tr:first-child {
+	background: #111;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+div.portlet_tunnel_progress thead tr:last-child {
+	background: #444;
+}
+
+div.portlet_tunnel_progress table {
+	font-size: .9em;
+}
+
+/*theader border*/
+div.portlet_tunnel_progress table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+}
+div.portlet_tunnel_progress table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_tunnel_progress table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+
+
+/*
+
+
+portlet_work_progress
+
+
+*/
+
+
+/*tab selector*/
+div.portlet_work_progress ul.nav {
+	border-bottom: 2px solid rgba(200,200,255,.3);
+}
+div.portlet_work_progress ul.nav li a:hover {
+	background: rgba(255,255,255,.1);
+	border: 1px solid rgba(255,255,255,.1);
+	color: #fff;
+	/*Added by Sebin*/
+	outline: 0;
+}
+div.portlet_work_progress ul.nav li.active a {
+	background: rgba(200,200,255,.5);
+	border: 1px solid rgba(200,200,255,.5);
+	color: #fff;
+	/*Added by Sebin*/
+	outline: 0;
+}
+
+/*table title*/
+div.portlet_work_progress div.content {
+	background: #252237;
+}
+div.portlet_work_progress div.portlet_content {
+	padding-top: 10px;
+}
+div.portlet_work_progress div.portlet_title {
+	color: #fff;
+}
+
+/*table plate - header*/
+
+div.portlet_work_progress div.table_plate {
+	padding: 0 0 10px 0;
+}
+/*Added by Sebin*/
+div.portlet_work_progress div.table_plate a {
+	outline: 0;
+}
+
+div.portlet_work_progress div.table_plate a i {
+	color: #fff;
+	/*Added by Sebin*/
+	outline: 0;
+}
+
+div.portlet_work_progress div.table_plate div.header {
+	background: #111;
+}
+div.portlet_work_progress div.table_plate div.header span:first-child {
+	border-right: 2px solid #252237;
+}
+
+div.portlet_work_progress div.table_plate div.header span:last-child,
+div.portlet_work_progress div.table_plate div.summary span:last-child {
+	text-align: center;
+}
+
+div.portlet_work_progress div.table_plate div.header span,
+div.portlet_work_progress div.table_plate div.summary span {
+	display: inline-block;
+	padding: 5px 10px;
+}
+div.portlet_work_progress div.table_plate div.summary span.text,
+div.portlet_work_progress div.table_plate div.header span.text {
+	width: 68%;
+}
+div.portlet_work_progress div.table_plate div.summary span.value,
+div.portlet_work_progress div.table_plate div.header span.value {
+	width: 30%;
+}
+
+div.portlet_work_progress div.table_plate div.detail {
+	padding: 5px 0 5px 20px;
+	border-bottom: 1px solid rgba(200,200,255,.3);
+}
+
+/*table plate - table*/
+div.portlet_work_progress div.table_plate div.detail thead tr th {
+	font-size: .9em;
+	background: rgba(0,0,255,.1);
+}
+div.portlet_work_progress div.table_plate div.detail tbody tr td {
+	border-bottom: 1px solid #000 !important;
+}
+
+div.portlet_work_progress div.show span.show_subtitle {
+	display: block;
+	padding: 10px;
+	border-top: 2px solid rgba(255,255,255,.15);
+	background: rgba(255,255,255,.15);
+}
+
+
+div.portlet_work_progress thead tr:first-child {
+	background: #111;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+div.portlet_work_progress thead tr:last-child {
+	background: #444;
+}
+
+div.portlet_work_progress table {
+	font-size: .9em;
+}
+
+/*theader border*/
+div.portlet_work_progress table th {
+	border-bottom: 1px solid #000 !important;
+	font-weight: normal;
+}
+div.portlet_work_progress table .col_separation {
+	border-right: 2px solid #223;
+}
+
+/*tbody border*/
+div.portlet_work_progress table tbody td {
+	border-bottom: 1px solid #669 !important;
+}
+
+
+
+
+
+
+
+/*
+
+
+pierchart
+
+
+*/
+
+/*general*/
+div.portlet_pierchart div.content {
+	background: #252237;
+}
+div.portlet_pierchart div.portlet_content {
+	/*padding: 30px 70px;*/
+	/*Modified by Sebin*/
+	padding: 30px;
+}
+div.portlet_pierchart div.portlet_title {
+	color: #fff;
+}
+
+div.portlet_pierchart div.halfdonut span {
+	display: block;
+	border-top: 1px solid #669;
+	text-align: center;
+}
+
+div.portlet_pierchart div.chart_pierchart {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	/*Added by Sebin*/
+	margin-left: 54px;
+}
+
+div.portlet_pierchart div.legend_pierchart span {
+	display: inline-block;
+	padding: 0 20px 0 0;
+}
+div.portlet_pierchart div.legend_pierchart .brick {
+	width: 30px;
+	height: 10px;
+	margin: 0 10px 0 0;
+}
+
+div.legend_pierchart .brick1 {
+	background: #999;
+}
+div.legend_pierchart .brick2 {
+	background: #f50;
+}
+div.legend_pierchart .brick3 {
+	background: #0f0;
+}
+div.legend_pierchart .delay_mark {
+	border-left: 2px solid rgba(255,0,100,1);
+	border-right: 2px solid rgba(255,0,100,1);
+	border-bottom: 4px solid rgba(255,0,100,1);
+}
+
+div.legend_pierchart .legend_station {
+	display: block;
+	width: 55px !important;
+	height: 5px;
+	border-bottom: 5px solid #0ff;
+}
+div.legend_pierchart .legend_special_span {
+	display: block;
+	width: 55px !important;
+	height: 5px;
+	border-bottom: 6px dotted #a0f;
+}
+
+
+
+/*pier block setup*/
+
+div.portlet_pierchart div.pier_block {
+	display: inline-block;
+	font-size: .8em;
+	height: 250px;
+	border-bottom: 2px solid #333;
+}
+
+
+/*pier block = type a*/
+
+div.portlet_pierchart div.pier_block_type_a {
+	width: 115px;
+	margin-top: 5px;
+}
+
+
+/*pier block = type b*/
+
+div.pier_block_type_b {
+	margin-top: 5px;
+}
+
+
+/*pier block = type c*/
+
+div.portlet_pierchart div.pier_block_type_C {
+	width: 70px;
+	margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+/*marker a*/
+div.pier_block div.marker_a {
+	/*display: none;*/
+	height: 50px;
+	border-top: 3px solid rgba(0,0,0,.5);
+}
+
+
+/*marker b*/
+div.pier_block div.marker_b {
+	height: 13px;
+}
+
+
+/*z-index*/
+div.pier_block div.marker_a span.content,
+div.pier_block div.marker_b span.content,
+div.pier_block div.span span.content,
+div.pier_block div.pier span.content,
+div.pier_block div.pier_id span.content,
+div.marker_d span.content {
+	z-index: 10;
+}
+
+
+/*pier default color*/
+
+path.a_pile,
+path.a_pilecap,
+path.a_pier,
+path.a_pierhead,
+path.b_pile,
+path.b_pilecap,
+path.b_pier,
+path.b_pierhead,
+path.c_pierhead {
+	stroke:#000;
+	stroke-width:1;
+	stroke-opacity:0;
+}
+
+/*span default color*/
+
+path.a_parapet,
+path.b_parapet,
+path.c_parapet {
+	stroke:#0f0;
+	stroke-width:1px;
+	stroke-linecap:butt;
+	stroke-linejoin:miter;
+	stroke-opacity:0
+}
+path.a_parapet {
+	fill:#0f0;
+	fill-opacity:1;
+}
+path.b_parapet {
+	fill:#0f0;
+	fill-opacity:1;
+}
+path.c_parapet {
+	fill:#0f0;
+	fill-opacity:1;
+}
+
+path.a_span,
+path.b_span,
+path.c_span,
+path.x_span {
+	stroke:#0f0;
+	stroke-width:1px;
+	stroke-linecap:butt;
+	stroke-linejoin:miter;
+	stroke-opacity:0
+}
+path.a_span {
+	fill:#0f0;
+	fill-opacity:1;
+}
+path.b_span {
+	fill:#0f0;
+	fill-opacity:1;
+}
+path.c_span {
+	fill:#0f0;
+	fill-opacity:1;
+}
+path.x_span {
+	fill:#0f0;
+	fill-opacity:1;
+}
+
+/*span_station*/
+span.span_station {
+	display: block;
+	background: #0af;
+	height: 39px;
+	margin-bottom: 4px;
+}
+
+/*pier*/
+
+div.pier svg.narrowbody {
+	margin-left: -9px;
+}
+div.pier svg.widebody {
+	margin-left: -20px;
+}
+
+/*pier id name single*/
+div.pier_id span.content.single {
+	margin-left: -20px;
+	margin-top: -10px;
+	width: 100px;
+	display: block;
+	position: absolute;
+}
+div.pier_id span.content.single > span {
+	display: block;
+	padding: 3px 0;
+}
+div.pier_id span.content.single > span.name1 {
+	text-align: left;
+}
+div.pier_id span.content.single > span > span.id_plate {
+	background: #205;
+	padding: 2px 5px;
+}
+
+/*pier id name twin*/
+div.pier_id span.content.twin {
+	margin-left: -25px;
+	margin-top: -10px;
+	width: 70px;
+	display: block;
+	position: absolute;
+}
+div.pier_id span.content.twin > span {
+	display: block;
+	padding: 3px 0;
+}
+div.pier_id span.content.twin > span.name1 {
+	margin-top: -7px;
+	text-align: left;
+}
+div.pier_id span.content.twin > span.name2 {
+	margin-top: -5px;
+	text-align: right;
+}
+div.pier_id span.content.twin > span > span.id_plate {
+	background: #205;
+	padding: 2px 5px;
+}
+
+
+/*sbg*/
+
+span.separator_right {
+	border-right: 2px solid #f0f !important;
+}
+span.separator_left {
+	border-left: 2px solid #f0f !important;
+}
+
+div.span span.sbg {
+	display: inline-block;
+	height: 15px;
+	margin-top: 24px;
+	border-left: 1px solid rgba(0,0,0,0);
+	border-right: 1px solid rgba(0,0,0,0);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+div.span span.content.span_sbg:before {
+	content: "[";
+	font-weight: bolder;
+	color: #f0f;
+}
+div.span span.content.span_sbg:after {
+	content: "]";
+	font-weight: bolder;
+	color: #f0f;
+}
+
+
+
+
+/*button*/
+
+div.marker_d span.content {
+	margin-left: 70px;
+	margin-top: 25px;
+	width: 100px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+div.marker_d span.content button {
+}
+
+
+
+/*highlight*/
+
+.highlight_normal,
+.highlight_notice,
+.highlight_alert,
+.highlight_critical,
+.highlight_null {
+	/*display: none;*/
+	margin-top: -48px;
+	margin-left: 64px;
+	position: absolute;
+	width: 113px;
+	height: 80px;
+}
+.highlight_null {
+	border-left: 1px solid rgba(255,255,255,1);
+	border-right: 1px solid rgba(255,255,255,1);
+	border-bottom: 1px solid rgba(255,255,255,1);
+}
+.highlight_normal {
+	border-left: 1px solid rgba(0,0,0,0);
+	border-right: 1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+.highlight_notice {
+	border-left: 1px solid rgba(255,255,0,.2);
+	border-right: 1px solid rgba(255,255,0,.2);
+	border-bottom: 1px solid rgba(255,255,0,.2);
+}
+.highlight_alert {
+	border-left: 1px solid rgba(255,100,0,.5);
+	border-right: 1px solid rgba(255,100,0,.5);
+	border-bottom: 1px solid rgba(255,100,0,.5);
+}
+.highlight_critical {
+	border-left: 2px solid rgba(255,0,100,1);
+	border-right: 2px solid rgba(255,0,100,1);
+	border-bottom: 4px solid rgba(255,0,100,1);
+}
+
+
+
+/*marker a & b*/
+span.content.station {
+	position: absolute;
+	display: block;
+	/*margin-left: 55px;*/
+	width: 120px;
+	height: 5px;
+	border-top: 6px solid #0ff;
+}
+span.content.special_span {
+	position: absolute;
+	display: block;
+	width: 115px;
+	height: 5px;
+	border-top: 2px dotted #a0f;
+}
+
+span.content.station_title,
+span.content.special_span_title {
+	position: absolute;
+	display: block;
+	margin-top: 7px;
+	margin-left: 55px;
+	padding: 2px 10px;
+	vertical-align: text-bottom;
+}
+span.content.station_title {
+	background: rgba(0,255,2565,.2);
+}
+span.content.special_span_title {
+	background: rgba(255,0,2565,.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

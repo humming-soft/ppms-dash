@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300.16"
+   height="952.19"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="pier.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3763"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3765" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="-1237.4684"
+     inkscape:cy="398.39231"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3777"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="175,775"
+       id="guide3781" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="295,710.125"
+       id="guide3842" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="60.4375,399.4375"
+       id="guide3844" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="239.00209,821.65808"
+       id="guide3882" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-100.17215)">
+    <path
+       style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1"
+       d="m 249.34131,337.47226 -198.244855,-0.0511 c 0,0 -2.168406,-71.57158 -9.547054,-106.59639 C 32.099126,185.96631 0.54837168,100.6359 0.54837168,100.6359 l 138.72764832,0 160.50539,0 c 0,0 -29.41273,84.75998 -39.83489,130.18882 -8.63192,37.62546 -10.60521,106.64754 -10.60521,106.64754 z"
+       id="pier_cap"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccsc"
+       inkscape:label="#pier_cap">
+      <desc
+         id="desc3886">Pier Cap</desc>
+      <title
+         id="title3884">Pier Cap</title>
+    </path>
+    <rect
+       style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:1.06456387;stroke-opacity:1"
+       id="Pier_Body"
+       width="198.07683"
+       height="558.4967"
+       x="51.207119"
+       y="337.61234"
+       ry="0.22273682"
+       inkscape:label="#rect2991" />
+    <rect
+       style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.74710065;stroke-opacity:1"
+       id="Pile_Cap"
+       width="256.90561"
+       height="94.184898"
+       x="21.670496"
+       y="895.42322"
+       inkscape:label="#rect3785" />
+    <g
+       id="Piling_Group"
+       inkscape:label="#g3888"
+       transform="matrix(1,0,0,0.5213903,0,503.67093)">
+      <rect
+         y="932.02399"
+         x="207.33298"
+         height="119.81321"
+         width="41.911671"
+         id="rect3791"
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1" />
+      <rect
+         y="932.02948"
+         x="51.235119"
+         height="119.81321"
+         width="41.911671"
+         id="rect3791-3"
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1" />
+      <rect
+         y="932.08972"
+         x="129.20053"
+         height="119.81321"
+         width="41.911671"
+         id="rect3791-3-1"
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1" />
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3140"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-62.225397,138.35591)"><flowRegion
+         id="flowRegion3142"><rect
+           id="rect3144"
+           width="485.07523"
+           height="274.35745"
+           x="-25.455845"
+           y="1000.2733" /></flowRegion><flowPara
+         id="flowPara3148"
+         style="font-size:100px;text-align:center;text-anchor:middle">Pier</flowPara><flowPara
+         id="flowPara3152"
+         style="font-size:100px;text-align:center;text-anchor:middle">0000 A</flowPara></flowRoot>  </g>
+</svg>

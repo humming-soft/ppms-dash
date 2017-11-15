@@ -1,0 +1,270 @@
+
+html, body, input {
+	/*font-family: 'Nunito', sans-serif;*/
+	font-family: 'Exo 2', sans-serif;
+	/*font-family: 'Play', sans-serif;*/
+	/*font-family: 'Doppio One', sans-serif;*/
+	font-size: 16px;
+	background: #000f1e;
+	color: #dde;
+}
+
+h1 {font-size: 2em; font-weight: bold;}
+h2 {font-size: 1.7em; /*font-weight: ;*/}
+h3 {font-size: 1.4em; font-style: italic;}
+h4 {font-size: 1.1em; /*font-weight: ;*/}
+
+a {
+	font-style: normal;
+	text-decoration: none !important;
+	color: #0ff;
+}
+a:hover {
+	color: #0cf;
+}
+ul li {
+	list-style: none;
+}
+
+span.clear_both {
+	display: block;
+	clear: both;
+}
+
+
+/*____________________________________________
+override
+--------------------------------------------*/
+
+
+/*malihu - custom scroll*/
+.scroll_set_1 {
+	right: 15px;
+}
+
+
+
+
+/*____________________________________________
+basic
+--------------------------------------------*/
+
+div#wrapper {
+	width: 100%;
+	height: 100%;
+	min-width: 1300px; /*laptop width*/
+}
+div#wrapper_dashboard {
+
+}
+div#header {
+	background: #222234;
+	border-bottom: 2px solid #334;
+	height: 45px;
+	margin-bottom: 10px;
+}
+div#content {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*____________________________________________
+header
+--------------------------------------------*/
+
+
+.logo_holder {
+	padding: 7px 20px 10px 10px;
+}
+
+div.logo_holder div.logo {
+	display: inline-block;
+}
+div.logo_holder div.logo img {
+	padding: 0 5px 0 0;
+}
+div.logo_holder div.logo:first-child img {
+	height: 30px;
+}
+div.logo_holder div.logo:last-child img {
+	height: 20px;
+}
+
+.header_bottom {
+	padding: 5px 10px;
+}
+div.header_bottom div {
+	display: inline-block;
+}
+
+
+/*date time*/
+div#header_datetime {
+	padding: 10px 0 0 0;
+}
+
+#header_datetime span.hd_label {
+	font-size: .8em;
+}
+
+#header_datetime span.hd_button {
+	padding: 1px 5px;
+	font-size: .7em;
+	border-radius: 3em;
+	border:1px solid rgba(255,255,255,.5);
+	color: #fff;
+}
+#header_datetime span.hd_button:hover {
+	cursor: pointer;
+	border:1px solid #fff;
+}
+
+.hd_label_today {
+	margin: 0 15px 0 0;
+	color: #ccf;
+
+}
+.hd_label_data {
+	color: #fca;
+}
+
+/*menu*/
+#header_menu {
+	padding: 4px 0 0 0;
+	text-align: right;
+}
+
+#header_menu a {
+	color: #fff;
+	text-decoration: none;
+	outline: 0;
+}
+
+#header_menu .btn {
+	background: rgba(0,153,255,.4);
+}
+#header_menu .btnn:hover,
+#header_menu .btn:active,
+#header_menu .btn:visited,
+#header_menu .btn:link {
+	color: #fff;
+}
+#header_menu .btn.active {
+	background: rgba(0,153,255,.75);
+}
+#header_menu ul.dropdown-menu {
+	background: #124;
+	z-index: 999999;
+}
+#header_menu ul.dropdown-menu li a:hover {
+	background: #444;
+}
+
+/*____________________________________________
+Error 404
+--------------------------------------------*/
+
+
+div.error_404 {
+	padding: 100px 0;
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+div.error_404 div.main_title {
+	font-size: 7em;
+}
+div.error_404 div.title {
+	margin-top: -30px;
+	font-size: 2em;
+	font-weight: bolder;
+}
+div.error_404 div.subtitle {
+	padding: 30px;
+}
+
+
+/*____________________________________________
+scurve_page
+--------------------------------------------*/
+
+div.scurve_page {
+	padding: 20px 0;
+	width: 1220px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+div.scurve_page div.switchblock_sub_plate {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+}
+
+div.scurve_page div.switchblock {
+	height: 100px;
+	margin: 14px 5px;
+	border-radius: 2px;
+	color: #fff;
+}
+
+div.scurve_page div.switchblock_title {
+	font-size: 1.25em;
+	text-align: left;
+	padding: 0 20px;
+}
+
+div.scurve_page div.switchblock .image,
+div.scurve_page div.switchblock .title {
+	text-align: left;
+	display: inline-block;
+}
+
+div.scurve_page div.switchblock .image {
+	width: 110px;
+	text-align: center;
+}
+div.scurve_page div.switchblock .image img {
+	padding: 15px 0;
+}
+
+div.scurve_page div.switchblock div.title {
+	font-size: 1.25em;
+	vertical-align: middle;
+	width: 175px;
+	padding: 0 15px;
+}
+
+
+div.scurve_page > div.ssp_6scurve div.switchblock {
+	background: #096;
+}
+div.scurve_page > div.ssp_elevated div.switchblock {
+	background: #09c;
+}
+div.scurve_page > div.ssp_underground div.switchblock {
+	background: #960;
+}
+div.scurve_page > div.ssp_system div.switchblock {
+	background: #768;
+}
+
+div.scurve_page > div.ssp_6scurve div.switchblock:hover {
+	background: #1a7;
+	cursor: pointer;
+}
+div.scurve_page > div.ssp_elevated div.switchblock:hover {
+	background: #1ad;
+	cursor: pointer;
+}
+div.scurve_page > div.ssp_underground div.switchblock:hover {
+	background: #a71;
+	cursor: pointer;
+}
+div.scurve_page > div.ssp_system div.switchblock:hover {
+	background: #879;
+	cursor: pointer;
+}
+
+

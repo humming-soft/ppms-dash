@@ -1,0 +1,50 @@
+<div class="col-md-12 portlet portlet_keydates">
+    <div class="row content">
+        <div class="col-md-12 portlet_title">
+            <i class="fa_title_icon fa fa-calendar-check-o" aria-hidden="true"></i>
+            <% if (typeof(data.data[0]) !=="undefined"){%>
+            <% if (typeof(data.data[0].date) !== "undefined") { %>
+                <%=data.title%> <span class="plate_asof">(As of : <%=data.data[0].date%>) </span>
+            <% } else {%>
+                <%=data.title%>
+            <% }}else {%>
+                <%=data.title%>
+            <% }%>
+        </div>
+        <div class="col-md-12 portlet_content">
+            <div class="">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="col_separation col-md-3">Date</th>
+                        <th class="col_separation col-md-9">HSSE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                    data.data.sort(function(a,b){
+                        var x = new Date(a[0])
+                        var z = new Date(b[0])
+                        return z-x
+                    })
+                    for (var i in data.data) {
+                        var row = data.data[i];
+                    %>
+                    <tr>
+                        <td class=""><%=row[0]%></td>
+                        <td class=""><%=row[1]%></td>
+                    </tr>
+                    <%}%>
+                    <%
+                        if (data.data.length == 0){
+                    %>
+                    <tr>
+                        <td colspan="2" style="text-align: center">Nil</td>
+                    </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

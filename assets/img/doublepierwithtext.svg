@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1717.14"
+   height="762.45001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="doublepierwithtext.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotL"
+       style="overflow:visible">
+      <path
+         id="path4422"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect4147"
+       is_visible="true"
+       pattern="m 5.22272,0.5 c 47.71985,0 95.4397,0 143.15956,0 89.23656,0 178.47312,0 267.70969,0 23.60171,0.0522 47.20157,0.3365 70.80065,0.66564 0,0 -4.92353,19.17704 -4.92353,19.17704 l 0,0 c -23.53223,-0.31099 -47.06519,-0.57943 -70.59985,-0.61521 -89.23656,0 -178.47312,0 -267.70969,0 -47.71985,0 -95.4397,0 -143.15955,0 C 0.5,19.72747 5.22272,0.5 5.22272,0.5 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4145"
+       is_visible="true" />
+    <linearGradient
+       id="linearGradient3763"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3765" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotL-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4422-8"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotL-8-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4422-8-1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3506"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3508"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3510"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3512"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3514"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3516"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="713.00748"
+     inkscape:cy="372.28978"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3777"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="779.23165,1023.8906"
+       id="guide3882" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-203.64675,199.40411"
+       id="guide3909" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-130.10765,59.396969"
+       id="guide3911" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="416.5,635"
+       id="guide5574" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer"
+     transform="translate(0,-189.74)" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-289.91216)"
+     style="display:inline">
+    <g
+       id="g3425"
+       transform="translate(509.89654,161.83912)">
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474"
+         width="156.90204"
+         height="76.902031"
+         x="877.04895"
+         y="478.91113" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         x="961.77344"
+         y="530.86212"
+         id="Pier_Current_Text"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480"
+           x="961.77344"
+           y="530.86212">00%</tspan></text>
+      <g
+         style="fill:none"
+         transform="translate(200,0.5)"
+         id="g5569">
+        <rect
+           y="378.91113"
+           x="677.04895"
+           height="76.902031"
+           width="156.90204"
+           id="rect5474-0"
+           style="fill:none;stroke:#55c7cb;stroke-width:3.09796953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+        <text
+           inkscape:label="#text5478-3"
+           sodipodi:linespacing="125%"
+           id="Pier_Head_Current_Text"
+           y="430.86218"
+           x="761.77344"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+           xml:space="preserve"><tspan
+             y="430.86218"
+             x="761.77344"
+             id="tspan5480-6"
+             sodipodi:role="line">00%</tspan></text>
+      </g>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-2"
+         width="156.90204"
+         height="76.902031"
+         x="877.04901"
+         y="574.91113" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="961.77344"
+         y="626.86218"
+         id="Pile_Cap_Current_Text"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-5"
+           x="961.77344"
+           y="626.86218">00%</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-8"
+         width="156.90204"
+         height="76.902031"
+         x="876.55371"
+         y="679.24207" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="961.2782"
+         y="731.19305"
+         id="Piling_Current_Text"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-1"
+           x="961.2782"
+           y="731.19305">00%</tspan></text>
+      <text
+         inkscape:label="#text5407"
+         sodipodi:linespacing="125%"
+         id="Pier_Head_Text"
+         y="434.10818"
+         x="863.47424"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           y="434.10818"
+           x="863.47424"
+           id="tspan5409"
+           sodipodi:role="line">Pier Head</tspan></text>
+      <text
+         inkscape:label="#text5407-6"
+         sodipodi:linespacing="125%"
+         id="Pier_Text"
+         y="533.07269"
+         x="863.49298"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           y="533.07269"
+           x="863.49298"
+           id="tspan5409-0"
+           sodipodi:role="line">Pier</tspan></text>
+      <text
+         inkscape:label="#text5407-6-4"
+         sodipodi:linespacing="125%"
+         id="Pile_Cap_Text"
+         y="630.91876"
+         x="863.75903"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           y="630.91876"
+           x="863.75903"
+           id="tspan5409-0-9"
+           sodipodi:role="line">Pile Cap</tspan></text>
+      <text
+         inkscape:label="#text5407-6-4-4"
+         sodipodi:linespacing="125%"
+         id="Piling_Text"
+         y="731.89105"
+         x="862.78595"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           y="731.89105"
+           x="862.78595"
+           id="tspan5409-0-9-6"
+           sodipodi:role="line">Piling</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-6"
+         width="156.90204"
+         height="76.902031"
+         x="1048.7966"
+         y="479.4957" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1133.5211"
+         y="531.44666"
+         id="Pier_Last_Text"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-8"
+           x="1133.5211"
+           y="531.44666">00%</tspan></text>
+      <g
+         transform="translate(371.74761,1.0845559)"
+         id="g5569-6">
+        <rect
+           y="378.91113"
+           x="677.04895"
+           height="76.902031"
+           width="156.90204"
+           id="rect5474-0-6"
+           style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+        <text
+           inkscape:label="#text5478-3"
+           sodipodi:linespacing="125%"
+           id="Pier_Head_Last_Text"
+           y="430.86218"
+           x="761.77344"
+           style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+           xml:space="preserve"><tspan
+             y="430.86218"
+             x="761.77344"
+             id="tspan5480-6-3"
+             sodipodi:role="line">00%</tspan></text>
+      </g>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-2-8"
+         width="156.90204"
+         height="76.902031"
+         x="1048.7966"
+         y="575.49567" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1133.5211"
+         y="627.44672"
+         id="Pile_Cap_Last_Text"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-5-6"
+           x="1133.5211"
+           y="627.44672">00%</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-8-2"
+         width="156.90204"
+         height="76.902031"
+         x="1048.3013"
+         y="679.8266" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1133.0259"
+         y="731.77759"
+         id="Piling_Last_Text"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-1-5"
+           x="1133.0259"
+           y="731.77759">00%</tspan></text>
+      <text
+         inkscape:label="#text5407"
+         sodipodi:linespacing="125%"
+         id="Pier_Head_Text-9"
+         y="370.64136"
+         x="1008.024"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           style="font-size:32px;fill:#ffffff;fill-opacity:1"
+           y="370.64136"
+           x="1008.024"
+           id="tspan5409-4"
+           sodipodi:role="line">Current</tspan></text>
+      <text
+         inkscape:label="#text5407"
+         sodipodi:linespacing="125%"
+         id="Pier_Head_Text-9-8"
+         y="370.85068"
+         x="1201.6638"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           style="font-size:32px;fill:#ffffff;fill-opacity:1"
+           y="370.85068"
+           x="1201.6638"
+           id="tspan5409-4-8"
+           sodipodi:role="line">Last Week</tspan></text>
+    </g>
+    <g
+       id="g3370"
+       transform="matrix(0.8,0,0,0.8,-645.23311,213.91964)">
+      <rect
+         inkscape:label="#rect2991"
+         ry="0.17638275"
+         y="421.99725"
+         x="1475.9122"
+         height="442.26715"
+         width="198.16238"
+         id="Pier_Body_Left"
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.94753993;stroke-opacity:1" />
+      <rect
+         inkscape:label="#rect3785"
+         y="864.24951"
+         x="1446.449"
+         height="101.93908"
+         width="256.75983"
+         id="Pile_Cap_Left"
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.77702606;stroke-opacity:1" />
+      <g
+         inkscape:label="#g3888"
+         id="Piling_Group_Left"
+         transform="matrix(1.0001931,0,0,0.67964212,1424.6768,332.75499)">
+        <rect
+           inkscape:label="#rect3791"
+           style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1"
+           id="Piling_Left_3"
+           width="41.911671"
+           height="119.81321"
+           x="207.33298"
+           y="932.02399" />
+        <rect
+           inkscape:label="#rect3791-3"
+           style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1"
+           id="Piling_Left_1"
+           width="41.911671"
+           height="119.81321"
+           x="51.235119"
+           y="932.02948" />
+        <rect
+           inkscape:label="#rect3791-3-1"
+           style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1"
+           id="Piling_Left_2"
+           width="41.911671"
+           height="119.81321"
+           x="129.20053"
+           y="932.08972" />
+      </g>
+      <rect
+         inkscape:label="#rect2991"
+         ry="0.17623533"
+         y="422.36673"
+         x="2075.8547"
+         height="441.89755"
+         width="198.1628"
+         id="Pier_Body_Right"
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.94714493;stroke-opacity:1" />
+      <rect
+         inkscape:label="#rect3785"
+         y="864.24921"
+         x="2046.4762"
+         height="101.93908"
+         width="256.75983"
+         id="Pile_Cap_Right"
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.77702606;stroke-opacity:1" />
+      <g
+         inkscape:label="#g3888"
+         id="Piling_Group_Right"
+         transform="matrix(1.0001931,0,0,0.67964212,2024.7038,332.75472)">
+        <rect
+           inkscape:label="#rect3791-8"
+           style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1"
+           id="Piling_Right_3"
+           width="41.911671"
+           height="119.81321"
+           x="207.33298"
+           y="932.02399" />
+        <rect
+           inkscape:label="#rect3791-3-5"
+           style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1"
+           id="Piling_Right_1"
+           width="41.911671"
+           height="119.81321"
+           x="51.235119"
+           y="932.02948" />
+        <rect
+           inkscape:label="#rect3791-3-1-7"
+           style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.91923803;stroke-opacity:1"
+           id="Piling_Right_2"
+           width="41.911671"
+           height="119.81321"
+           x="129.20053"
+           y="932.08972" />
+      </g>
+      <rect
+         inkscape:label="#rect3198"
+         ry="0.076661669"
+         y="307.68182"
+         x="1475.7657"
+         height="114.70139"
+         width="798.45557"
+         id="Pier_Head"
+         style="opacity:0.97000002;fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.64190876;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.97223848;stroke-opacity:1"
+         d="m 2005.5705,307.41431 -247.9232,-0.0458 c 0,0 -2.7118,-64.01991 -11.9395,-95.34918 -11.8184,-40.12532 -51.2756,-116.452341 -51.2756,-116.452341 l 173.4917,0 200.7266,0 c 0,0 -36.7833,75.816771 -49.8173,116.452321 -10.795,33.65552 -13.2627,95.39492 -13.2627,95.39492 z"
+         id="pier_cap"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccscccsc"
+         inkscape:label="#pier_cap">
+        <desc
+           id="desc3886">Pier Cap</desc>
+        <title
+           id="title3884">Pier Cap</title>
+      </path>
+    </g>
+    <path
+       style="fill:none;stroke:#55c7cb;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL-8)"
+       d="m 861.34823,395.35142 195.65037,212.35631 314.6503,0"
+       id="path3913"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#55c7cb;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL-8)"
+       d="m 1094.5626,662.27322 42.2204,48.30866 236.1736,0"
+       id="path3915"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#55c7cb;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL-8)"
+       d="m 1099.2174,941.79717 101.7283,-134.39371 172.718,-0.11091"
+       id="path3917"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#55c7cb;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL-8)"
+       d="m 1097.6525,1023.7049 104.7999,-116.47739 169.7453,0.17157"
+       id="path3917-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <g
+       style="display:inline"
+       id="g3425-7"
+       transform="translate(-1029.0047,186.68667)">
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-1"
+         width="156.90204"
+         height="76.902031"
+         x="1031.0491"
+         y="478.91113" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         x="1115.7734"
+         y="530.86212"
+         id="Pier_Current_Text-Left"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-52"
+           x="1115.7734"
+           y="530.86212">00%</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-2-3"
+         width="156.90204"
+         height="76.902031"
+         x="1031.0491"
+         y="574.91113" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1115.7734"
+         y="626.86218"
+         id="Pile_Cap_Current_Text-Left"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-5-2"
+           x="1115.7734"
+           y="626.86218">00%</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-8-1"
+         width="156.90204"
+         height="76.902031"
+         x="1030.5537"
+         y="679.24207" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1115.2782"
+         y="731.19305"
+         id="Piling_Current_Text-Left"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-1-8"
+           x="1115.2782"
+           y="731.19305">00%</tspan></text>
+      <text
+         inkscape:label="#text5407-6"
+         sodipodi:linespacing="125%"
+         id="Pier_Text-6"
+         y="536.93054"
+         x="1441.7571"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           y="536.93054"
+           x="1441.7571"
+           id="tspan5409-0-1"
+           sodipodi:role="line">Pier</tspan></text>
+      <text
+         inkscape:label="#text5407-6-4"
+         sodipodi:linespacing="125%"
+         id="Pile_Cap_Text-8"
+         y="629.11975"
+         x="1519.8048"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           y="629.11975"
+           x="1519.8048"
+           id="tspan5409-0-9-9"
+           sodipodi:role="line">Pile Cap</tspan></text>
+      <text
+         inkscape:label="#text5407-6-4-4"
+         sodipodi:linespacing="125%"
+         id="Piling_Text-2"
+         y="726.67786"
+         x="1467.92"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           y="726.67786"
+           x="1467.92"
+           id="tspan5409-0-9-6-7"
+           sodipodi:role="line">Piling</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-6-9"
+         width="156.90204"
+         height="76.902031"
+         x="1202.7966"
+         y="479.4957" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1287.5211"
+         y="531.44666"
+         id="Pier_Last_Text-Left"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-8-4"
+           x="1287.5211"
+           y="531.44666">00%</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-2-8-3"
+         width="156.90204"
+         height="76.902031"
+         x="1202.7966"
+         y="575.49567" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1287.5211"
+         y="627.44672"
+         id="Pile_Cap_Last_Text-Left"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-5-6-1"
+           x="1287.5211"
+           y="627.44672">00%</tspan></text>
+      <rect
+         style="fill:none;stroke:#55c7cb;stroke-width:3.09800005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5474-8-2-1"
+         width="156.90204"
+         height="76.902031"
+         x="1202.3013"
+         y="679.8266" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial Unicode MS"
+         x="1287.0259"
+         y="731.77759"
+         id="Piling_Last_Text-Left"
+         sodipodi:linespacing="125%"
+         inkscape:label="#text5478"><tspan
+           sodipodi:role="line"
+           id="tspan5480-1-5-8"
+           x="1287.0259"
+           y="731.77759">00%</tspan></text>
+      <text
+         inkscape:label="#text5407"
+         sodipodi:linespacing="125%"
+         id="Pier_Head_Text-9-7"
+         y="466.64136"
+         x="1156.0239"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           style="font-size:32px;fill:#ffffff;fill-opacity:1"
+           y="466.64136"
+           x="1156.0239"
+           id="tspan5409-4-4"
+           sodipodi:role="line">Current</tspan></text>
+      <text
+         inkscape:label="#text5407"
+         sodipodi:linespacing="125%"
+         id="Pier_Head_Text-9-8-2"
+         y="466.85068"
+         x="1349.6638"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
+         xml:space="preserve"><tspan
+           style="font-size:32px;fill:#ffffff;fill-opacity:1"
+           y="466.85068"
+           x="1349.6638"
+           id="tspan5409-4-8-7"
+           sodipodi:role="line">Last Week</tspan></text>
+    </g>
+    <g
+       id="g3668"
+       transform="translate(1526.926,191.29497)"
+       style="stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none">
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3915-9"
+         d="m -912.29426,507.01818 -40.09903,39.11627 -236.17371,0"
+         style="fill:#000000;fill-opacity:0;stroke:#55c7cb;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL-8);display:inline" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3917-3"
+         d="M -908.46374,745.22842 -1015.1419,639.82609 -1188.567,639.71518"
+         style="fill:none;stroke:#55c7cb;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL-8);display:inline" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3917-2-1"
+         d="m -909.72733,827.94379 -111.87087,-91.72868 -169.7454,0.17157"
+         style="fill:none;stroke:#55c7cb;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL-8);display:inline" />
+    </g>
+  </g>
+</svg>

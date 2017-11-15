@@ -1,0 +1,16 @@
+<div class="header bg-dot30">
+    <!--img src="/mpxd/assets/img/icons/line_chart-26.png" style="float: left;margin-right: 13px;"-->
+    <% if (typeof(data.data.date) !== "undefined") { %>
+		<h2><%=data.title%></h2> <h2 class="asof">(As of <%=data.data.date%>)</h2>
+	<% } else {%>
+		<h2><%=data.title%></h2>
+	<% } %>
+    <i class="header-icon fa fa-file-image-o"></i>
+</div>
+<div class="content" style="background: none;/*#1d2a34*/">
+    <!--h2>Header h2</h2-->
+
+    <div style="position: relative; width: 70%;margin: auto" id="slider_<%=data.id%>">
+	<h4 style="position: absolute; right: 10px; top: 10px; z-index: 999;background: rgba(0, 0, 0, 0.6);padding: 5px;"><a style="color: #9EDD2E" href="javascript:void(0);" onclick="loadPage('<%=currentSlug%>/gallery')">Visit gallery <i class="fa fa-picture-o"></i></a></h4>
+    </div>	
+</div>

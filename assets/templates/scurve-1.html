@@ -1,0 +1,52 @@
+<div class="col-md-12 portlet portlet_scurve">
+    <div class="row content">
+        <div class="col-md-12 portlet_title">
+            <i class="fa_title_icon fa fa-area-chart" aria-hidden="true"></i>
+            <% if (typeof(data.date) !== "undefined") { %>
+            <%=data.title%> <span class="plate_asof">(As of <%=data.date%>)</span>
+            <% } else {%>
+            <%=data.title%>
+            <% } %>
+        </div>
+        <span class="scurve_arrow scurve_arrow_alt scurve_arrow_up"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+        <div class="col-md-12 portlet_content pl0">
+            <div class="row">
+                <div class="col-md-3 portlet_scurve_data">
+                    <div class="row  ml0">
+                        <div class="col-md-12 item psd_data_type1">
+                            <span class="item_title">Early</span>
+                            <span class="item_value iv_early"><%=data.currentEarly%>%</span>
+                        </div>
+                        <div class="col-md-12 item psd_data_type1">
+                            <span class="item_title">Actual</span>
+                            <span class="item_value iv_late"><%=data.currentActual%>%</span>
+                        </div>
+                        <div class="col-md-12 item psd_data_type1">
+                            <span class="item_title">Late</span>
+                            <span class="item_value iv_actual"><%=data.currentLate%>%</span>
+                        </div>
+                        <div class="col-md-12 item psd_data_type2">
+                            <span class="item_title">Variance</span>
+                            <div class="">
+                                <div class="col-md-6 item">
+                                    <span class="item_title_variance">Early</span>
+                                    <span class="item_value_variance iv_early"><%=data.varEarly%></span>
+                                </div>
+                                <div class="col-md-6 item">
+                                    <span class="item_title_variance">Late</span>
+                                    <span class="item_value_variance iv_actual"><%=data.varLate%></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 portlet_scurve_graph pl0">
+                    <!--<div class="col-xs-12">-->
+                        <div class="chart chart-scurve" id="chart_<%=data.id%>">
+                        </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

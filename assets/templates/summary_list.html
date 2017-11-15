@@ -1,0 +1,68 @@
+<div class="col-md-12 portlet portlet_summary">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-circle-o-notch" aria-hidden="true"></i>
+			<% if (typeof(data.data[0].date) !== "undefined") { %>
+			<%=data.title%> <h2 class="asof">(As of <%=data.data[0].date%>)</h2>
+			<% } else {%>
+			<%=data.title%>
+			<% } %>
+		</div>
+		<div class="col-md-12 portlet_content">
+			<div class="">
+				<!-- <div class="theader_button">
+					<button type="button" class="btn btn-primary">Compare</button>
+				</div> -->
+				<table class="table">
+					<thead>
+						<tr>
+							<!-- <th class="col_separation col-md-1">
+								<input type="checkbox" name="" value="">
+								Select All
+							</th> -->
+							<th class="col_separation col-md-3">North Pages</th>
+							<th class="col_separation col-md-4" colspan="3">Percentage (%)</th>
+							<th class="col_separation col-md-3" colspan="2">Weeks</th>
+							<th class="col_separation col-md-1">Status</th>
+						</tr>
+						<tr>
+							<!-- <th class="col_separation"></th> -->
+							<th class="col_separation"></th>
+							<th class="mrt_colorcode_bbar_1">Early Planned</th>
+							<th class="mrt_colorcode_bbar_2">Late Planned</th>
+							<th class="col_separation mrt_colorcode_bbar_3">Actual Progress</th>
+							<th class="mrt_colorcode_bbar_1">Variance Early</th>
+							<th class="mrt_colorcode_bbar_2">Variance Late</th>
+							<th class="col_separation"></th>
+						</tr>
+					</thead>
+					<tbody>
+					<% console.log(data.data);%>
+							<%_.each(data.data, function(row) {
+							var numColor = "num-green";
+							var blinker = "";
+							if(row.varianceLate < 0  && row.varianceLate >= -4) {
+								numColor = "num-yellow";
+							}else if(row.varianceLate < -4  && row.varianceLate > -8) {
+								numColor = "num-red";
+							}else if(row.varianceLate <= -8) {
+								blinker = "blink";
+							numColor = "num-red";
+							}
+							%>
+							<tr>
+							<td><%=row.item%></td>
+							<td class="val_early"><%=row.early%></td>
+							<td class="val_late"><%=row.late%></td>
+							<td class="val_actual"><%=row.actual%></td>
+							<td class="val_varearly"><%=row.varianceEarly%></td>
+							<td class="val_varlate"><%=row.varianceLate%></td>
+							<td class="ball_indicator mrt_colorcode_ball_1"><i class="fa fa-circle" aria-hidden="true"></i></td>
+						</tr>
+						<%});%>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

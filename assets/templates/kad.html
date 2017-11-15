@@ -1,0 +1,61 @@
+<div class="col-md-12 portlet portlet_keydates">
+    <div class="row content">
+        <div class="col-md-12 portlet_title">
+            <i class="fa_title_icon fa fa-calendar-check-o" aria-hidden="true"></i>
+            <% if (typeof(data.data[0]) !== "undefined") { %>
+            <% if (typeof(data.data[0].date) !== "undefined") { %>
+                <%=data.title%> <span class="plate_asof">(As of : <%=data.data[0].date%>) </span>
+            <% } else {%>
+                <%=data.title%>
+            <% }}else {%>
+                <%=data.title%>
+            <% }%>
+        </div>
+        <div class="col-md-12 portlet_content">
+            <div class="">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="col_separation">KAD</th>
+                        <th class="col_separation set_center">Forecast</th>
+                        <th class="col_separation set_center">Contract</th>
+                        <th class="col_separation set_center">Variance</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <% if(typeof(data.data) !== "undefined"){
+                        if(data.data.length > 0){
+                        var k=0;
+                        if (typeof(data.data[0]) !== "undefined"){
+                                if (typeof(data.data[0].date) !== "undefined"){
+                                    k+=1;
+                                }
+                            }
+                            for(var i=k; i<(data.data).length; i++){
+                                var variance = ((typeof(data.data[i][1]) !== "undefined" || typeof(data.data[i][2]) !== "undefined") || (data.data[i][1] != "" || data.data[i][2] != "" ) ) ? Math.round(compareDates(data.data[i][1],data.data[i][2])) : "N/A" %>
+                            <tr>
+                                <td><%=(typeof(data.data[i][0]) !=="undefined")? data.data[i][0] : "-"%></td>
+                                <td class="set_center"><%=(typeof(data.data[i][1]) !=="undefined")? data.data[i][1] : "-"%></td>
+                                <td class="set_center"><%=(typeof(data.data[i][2]) !=="undefined")? data.data[i][2] : "-"%></td>
+                                <%if(variance != "N/A"){%>
+                                    <td class="set_center <%=((variance<0) ? 'mrt_colorcode_2' :((variance>=0)? 'mrt_colorcode_1' : ''))%>"><%=variance%>W</td>
+                                <%}else{%>
+                                    <td class="set_center"><%=variance%></td>
+                                <%}%>
+                            </tr>
+                            <%} }else{ %>
+                        <tr>
+                            <td colspan="4" class="text-center">Nil</td>
+                        </tr>
+                        <% }}else{%>
+                        <tr>
+                            <td colspan="4" class="text-center">Nil</td>
+                        </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

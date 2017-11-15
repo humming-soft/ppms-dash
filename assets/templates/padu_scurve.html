@@ -1,0 +1,121 @@
+<div class="col-md-12 portlet portlet_padu_scurve">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-area-chart" aria-hidden="true"></i>
+			<span class="title">
+				<% if (typeof(data) !== "undefined") { %>
+			<% if (typeof(data.date[0]) !== "undefined") { %>
+			<%=data.title%> <span class="plate_asof">(As of : <%=data.date[0]%>) </span>
+			<% } else {%>
+			<%=data.title%>
+			<% }}else {%>
+			<%=data.title%>
+			<% }%>
+			</span>
+		</div>
+		<!-- <span class="scurve_arrow scurve_arrow_alt scurve_arrow_up"><i class="fa fa-arrow-up" aria-hidden="true"></i></span> -->
+		<div class="col-md-12 portlet_content">
+			<div class="row highcharts_inside">
+				<div class="col-md-12">
+					<div class="chart chart-scurve" id="portlet_padu_scurve"></div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<style type="text/css">
+	div.portlet_padu_scurve div.content {
+		background: #252237;
+	}
+
+	div.portlet_padu_scurve svg text {
+		fill:#fff!important;
+		font-size: 13px!important;
+	}
+
+	div.portlet_padu_scurve #portlet_padu_scurve {
+		padding: 20px 20px 20px 0;
+		height: 350px;
+	}
+</style>
+
+
+<!--script type="text/javascript">
+	$(document).ready(function(){
+		$('.portlet_padu_scurve .portlet_title .title').html('S-Curve');
+		
+		/*var padu_scurve_time = ['Week 39','Week 40','Week 41','Week 42','Week 43','Week 44','Week 45','Week 46','Week 47','Week 48','Week 49','Week 50','Week 51','Week 52'];
+		var padu_scurve_early = [13.69,34.08,42.71,54.17,57.89,61.83,70.76,80.13,83.85,88.76,92.63,96.43,99.26,100.00];
+		var padu_scurve_late = [11.69,32.08,40.71,52.17,55.89,59.83,68.76,78.13,81.85,86.76,90.63,94.43,97.26,98.00];
+		var padu_scurve_actual = [0,13.69,34.08,40.48,50.74,54.17,56.90,57.64];*/
+		
+		Highcharts.chart('portlet_padu_scurve', {
+			title: {
+				text: ''
+			},
+
+			subtitle: {
+				text: ''
+			},
+			tooltip: {
+				backgroundColor: '#445',
+				shared: true,
+				crosshairs: true
+			},
+			xAxis: {
+		        categories: padu_scurve_time
+		    },
+			yAxis: {
+				min: 0,
+				max:100,
+				title: {
+					text: 'Progress (%)'
+				}
+			},
+			legend: {
+				layout: 'vertical',
+				align: 'right',
+				verticalAlign: 'middle'
+			},
+
+			series: [{
+				name: 'Early',
+				color:'#0f0',
+				data: padu_scurve_early
+			}, {
+				name: 'Late',
+				color:'#f00',
+				data: padu_scurve_late
+			}, {
+				name: 'Actual',
+				color:'#0cf',
+				data: padu_scurve_actual
+			}],
+
+			responsive: {
+				rules: [{
+					condition: {
+						maxWidth: 500
+					},
+					chartOptions: {
+						legend: {
+							layout: 'horizontal',
+							align: 'center',
+							verticalAlign: 'bottom'
+						}
+					}
+				}]
+			},
+			credits: {
+				enabled: false
+			}
+		});
+		
+		
+	});
+</script>
+-->

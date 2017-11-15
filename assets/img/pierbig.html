@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.dot circle {
+  fill: lightsteelblue;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.dot circle.dragging {
+  fill: red;
+  stroke: brown;
+}
+
+.axis line {
+  fill: none;
+  stroke: #ddd;
+  shape-rendering: crispEdges;
+  vector-effect: non-scaling-stroke;
+}
+
+</style>
+<body>
+
+<script src="../js/d3.js"></script>
+<script>
+
+var data = [
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"double","status":""}, "span":{"type":"double","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	{"pier":{"type":"single","status":""}, "span":{"type":"single","status":""}},
+	//{"pier":{"type":"single","status":""}, "span":{}}
+]
+
+var cloned = data.slice(0);
+for (var i = 0; i < 4; i++) {
+data = data.concat(cloned);
+}
+
+var margin = {top: -5, right: -5, bottom: -5, left: -5},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var zoom = d3.behavior.zoom()
+    .scaleExtent([0.5, 10])
+    .on("zoom", zoomed);
+
+var drag = d3.behavior.drag()
+    .origin(function(d) { return d; })
+    .on("dragstart", dragstarted)
+    .on("drag", dragged)
+    .on("dragend", dragended);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.right + ")")
+    .call(zoom);
+	
+	
+var defs = svg.append("svg:defs")
+var filter = defs.append("svg:filter")
+	.attr("x","-0.3")
+	.attr("y","-0.1")
+	.attr("width","1.6")
+	.attr("height","1.2")
+	.attr("id","textbg")
+	.append("svg:feFlood")
+	.attr("flood-color","#111111")
+	filter.append("svg:feComposite")
+	.attr("in","SourceGraphic")
+	
+var rect = svg.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .style("fill", "none")
+    .style("pointer-events", "all");
+
+var container = svg.append("g")
+	.attr("id","viewport");
+
+container.append("g")
+    .attr("class", "x axis")
+  .selectAll("line")
+    .data(d3.range(0, width, 10))
+  .enter().append("line")
+    .attr("x1", function(d) { return d; })
+    .attr("y1", 0)
+    .attr("x2", function(d) { return d; })
+    .attr("y2", height);
+
+container.append("g")
+    .attr("class", "y axis")
+  .selectAll("line")
+    .data(d3.range(0, height, 10))
+  .enter().append("line")
+    .attr("x1", 0)
+    .attr("y1", function(d) { return d; })
+    .attr("x2", width)
+    .attr("y2", function(d) { return d; });
+	
+
+	
+	
+function getItsColor(p) {
+	if (p >= 100) return "hsl(134, 82%, 30%)"
+	if (p > 0) return "rgb(255, 170, 66)"
+	return "#cccccc";
+}
+
+function addSingleSpan(id, xy) {
+	var span = container.append("g")
+	.attr("transform","translate("+xy.join(',')+")")
+	
+	var parapet_s = 100;
+	var span_s = 100;
+	
+	/* Parapet */
+	span.append("rect")
+    .attr("x","45")
+	.attr("y","12")
+	.attr("width","159")
+	.attr("height","5")
+	.attr("fill",getItsColor(parapet_s))
+	.style("stroke-width", 0.09)
+	.style("stroke","#BBBBBB")
+	
+	/* Span */
+	span.append("rect")
+    .attr("x","45")
+	.attr("y","17.75")
+	.attr("width","159")
+	.attr("height","12")
+	.attr("fill",getItsColor(span_s))
+	.style("stroke-width", 0.09)
+	.style("stroke","#BBBBBB")
+	
+	/* Hack to include text background, from http://stackoverflow.com/questions/12260370/draw-text-in-svg-but-remove-background */
+	span.append("svg:use")
+	.attr("xlink:href","#spantext"+id)
+	.attr("filter","url(#textbg)")
+	.attr("fill","black")
+	
+	span.append("svg:text")
+	.attr("dx","0")
+	.attr("dy","0")
+	.attr("transform","translate(125,70)")
+	.attr("id","spantext"+id)
+	.attr("fill","#ffffff")
+	.style("font-family","Arial Unicode MS")
+	.style("font-size","8px")
+	.style("text-anchor","middle")
+	.text("Span "+id)
+	.attr("class","normaltext");
+	
+}
+
+function addDoubleSpan(id, xy) {
+	var span = container.append("g")
+	.attr("transform","translate("+xy.join(',')+")")
+	
+	var parapet_s = 0;
+	var span_s_t = 90;
+	var span_s_b = 100;
+	
+	/* Parapet */
+	span.append("rect")
+    .attr("x","45")
+	.attr("y","0")
+	.attr("width","159")
+	.attr("height","4")
+	.attr("fill",getItsColor(parapet_s))
+	.style("stroke-width", 0.09)
+	.style("stroke","#BBBBBB")
+	
+	/* Span Top*/
+	span.append("rect")
+    .attr("x","45")
+	.attr("y","4.75")
+	.attr("width","159")
+	.attr("height","12")
+	.attr("fill",getItsColor(span_s_t))
+	.style("stroke-width", 0.09)
+	.style("stroke","#BBBBBB")
+	
+	
+	/* Span Bottom */
+	span.append("rect")
+    .attr("x","45")
+	.attr("y","17.75")
+	.attr("width","159")
+	.attr("height","12")
+	.attr("fill",getItsColor(span_s_b))
+	.style("stroke-width", 0.09)
+	.style("stroke","#BBBBBB")
+	
+	/* Hack to include text background, from http://stackoverflow.com/questions/12260370/draw-text-in-svg-but-remove-background */
+	
+	/* Span Text Top */
+	span.append("svg:use")
+	.attr("xlink:href","#spantext_t"+id)
+	.attr("filter","url(#textbg)")
+	.attr("fill","black")
+	
+	span.append("svg:text")
+	.attr("dx","0")
+	.attr("dy","0")
+	.attr("transform","translate(125,60)")
+	.attr("id","spantext_t"+id)
+	.attr("fill","#ffffff")
+	.style("font-family","Arial Unicode MS")
+	.style("font-size","7px")
+	.style("text-anchor","middle")
+	.text("Span "+id+" A")
+	.attr("class","normaltext");
+	
+	/* Hack to include text background, from http://stackoverflow.com/questions/12260370/draw-text-in-svg-but-remove-background */
+	
+	/* Span Text Bottom */ 
+	span.append("svg:use")
+	.attr("xlink:href","#spantext_b"+id)
+	.attr("filter","url(#textbg)")
+	.attr("fill","black")
+	
+	span.append("svg:text")
+	.attr("dx","0")
+	.attr("dy","0")
+	.attr("transform","translate(125,90)")
+	.attr("id","spantext_b"+id)
+	.attr("fill","#ffffff")
+	.style("font-family","Arial Unicode MS")
+	.style("font-size","7px")
+	.style("text-anchor","middle")
+	.text("Span "+id+" B")
+	.attr("class","normaltext");
+	
+}
+
+function addSinglePier(id, xy) {
+	var phead = 0;
+	var pier_l = 0;
+	var pcap_l = 50;
+	var pile_l = 100;
+	
+	var pier = container.append("g")
+	.attr("id","pier"+id)
+	.attr("transform","translate("+xy.join(',')+") scale(0.1)")
+	
+	pier.append("svg:path")
+	.attr("d","m 249.34131,337.47226 -198.244855,-0.0511 c 0,0 -2.168406,-71.57158 -9.547054,-106.59639 C 32.099126,185.96631 0.54837168,100.6359 0.54837168,100.6359 l 138.72764832,0 160.50539,0 c 0,0 -29.41273,84.75998 -39.83489,130.18882 -8.63192,37.62546 -10.60521,106.64754 -10.60521,106.64754 z")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(phead))
+	
+	pier.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pier_l))
+	.attr("width","198.19127")
+	.attr("height","444.61115")
+	.attr("x","51.149895")
+	.attr("y","337.55511")
+	.attr("ry","0.17731756")
+	
+	pier.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pcap_l))
+	.attr("width","256.71027")
+	.attr("height","149.98935")
+	.attr("x","21.768166")
+	.attr("y","782.02112")
+	
+	pilingg = pier.append("svg:g")
+	
+	pilingg.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","51.235119")
+	.attr("y","932.02399")
+	pilingg.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","129.20053")
+	.attr("y","932.02399")
+	pilingg.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","207.33298")
+	.attr("y","932.02399")
+	
+	
+	/* Hack to include text background, from http://stackoverflow.com/questions/12260370/draw-text-in-svg-but-remove-background */
+	pier.append("svg:use")
+	.attr("xlink:href","#piertext"+id)
+	.attr("filter","url(#textbg)")
+	.attr("fill","black")
+	
+	pier.append("svg:text")
+	.attr("dx","0")
+	.attr("dy","0")
+	.attr("transform","translate(150,1200)")
+	.attr("id","piertext"+id)
+	.attr("fill","#ffffff")
+	.style("font-family","Arial Unicode MS")
+	.style("font-size","72px")
+	.style("text-anchor","middle")
+	.text("Pier "+id)
+	.attr("class","bigtext");
+}	
+	
+function addDoublePier(id, xy) {
+	var phead = 100;
+	var pier_l = 100;
+	var pcap_l = 100;
+	var pile_l = 100;
+	var pier_r = 100;
+	var pcap_r = 100;
+	var pile_r = 100;
+	
+	pier = container.append("g")
+	.attr("id","pier"+id)
+	.attr("transform","translate("+xy.join(',')+") scale(0.1)")
+	
+	pier.append("svg:rect")
+	.attr("width","900.06549")
+	.attr("height","200.69179")
+	.attr("x","0.4507497")
+	.attr("y","99.766106")
+	.attr("ry","0.1341341")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(phead))
+	
+	/* Pier Left */
+	pier.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pier_l))
+	.attr("width","198.19127")
+	.attr("height","482.22528")
+	.attr("x","51.149895")
+	.attr("y","299.92133")
+	.attr("ry","0.19231865")
+	
+	/* Pier Right */
+	pier.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pier_r))
+	.attr("width","198.19127")
+	.attr("height","482.22528")
+	.attr("x","651.08057")
+	.attr("y","299.92133")
+	.attr("ry","0.19231865")
+	
+	/* Pile Cap Left */
+	pier.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pcap_l))
+	.attr("width","256.71027")
+	.attr("height","149.98935")
+	.attr("x","21.768166")
+	.attr("y","782.02112")
+	
+	/* Pile Cap Right */
+	pier.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pcap_r))
+	.attr("width","256.71027")
+	.attr("height","149.98935")
+	.attr("x","621.67944")
+	.attr("y","782.02112")
+	
+	
+	/* Piling Left */
+	pilingg_l = pier.append("svg:g")
+	
+	pilingg_l.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","51.235119")
+	.attr("y","932.02399")
+	pilingg_l.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","129.20053")
+	.attr("y","932.02399")
+	pilingg_l.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","207.33298")
+	.attr("y","932.02399")
+	
+	/* Piling Right */
+	pilingg_r = pier.append("svg:g")
+	.attr("transform","translate(599.91125,-3.9778743e-4)")
+	
+	pilingg_r.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","51.235119")
+	.attr("y","932.02399")
+	pilingg_r.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","129.20053")
+	.attr("y","932.02399")
+	pilingg_r.append("svg:rect")
+	.style("stroke-width", 0.9)
+	.style("stroke", "#BBBBBB")
+	.style("fill", getItsColor(pile_l))
+	.attr("width","41.911671")
+	.attr("height","119.81321")
+	.attr("x","207.33298")
+	.attr("y","932.02399")
+	
+	
+	/* Hack to include text background, from http://stackoverflow.com/questions/12260370/draw-text-in-svg-but-remove-background */
+	
+	/* Pile Text Left */
+	pier.append("svg:use")
+	.attr("xlink:href","#piertext_l"+id)
+	.attr("filter","url(#textbg)")
+	.attr("fill","black")
+	
+	pier.append("svg:text")
+	.attr("dx","0")
+	.attr("dy","0")
+	.attr("transform","translate(150,1200)")
+	.attr("id","piertext_l"+id)
+	.attr("fill","#ffffff")
+	.style("font-family","Arial Unicode MS")
+	.style("font-size","72px")
+	.style("text-anchor","middle")
+	.text("Pier "+id+" A")
+	.attr("class","bigtext");
+	
+	/* Pile Text Right */
+	pier.append("svg:use")
+	.attr("xlink:href","#piertext_r"+id)
+	.attr("filter","url(#textbg)")
+	.attr("fill","black")
+	
+	pier.append("svg:text")
+	.attr("dx","0")
+	.attr("dy","0")
+	.attr("transform","translate(750,1200)")
+	.attr("id","piertext_r"+id)
+	.attr("fill","#ffffff")
+	.style("font-family","Arial Unicode MS")
+	.style("font-size","72px")
+	.style("text-anchor","middle")
+	.text("Pier "+id+" B")
+	.attr("class","bigtext");
+}	
+	
+/* From https://gist.github.com/andrewrk/4382935 */
+function zfill1(number, size) {
+  number = number.toString();
+  while (number.length < size) number = "0" + number;
+  return number;
+}
+	
+var width = 800;
+var clevel = 0;
+var levelheight = 170;
+
+
+var timer = function(name) {
+    var start = new Date();
+    return {
+        stop: function() {
+            var end  = new Date();
+            var time = end.getTime() - start.getTime();
+            console.log('Timer:', name, 'finished in', time, 'ms');
+        }
+    }
+};
+
+lol = timer("Bency");
+for (var i = 0; i < data.length; i++) {
+	//7 Spaces in between piers & double piers
+	var current = data[i];
+	var xpad = 10;
+	var ypad = 10;
+	
+	var id = zfill1(i, 4);
+	var x = (xpad + (160*i)) % width;
+	clevel = Math.floor((160/width)*i);
+	var y = ypad + (levelheight*clevel) + 10;
+	
+	if (typeof current.pier.type != "undefined") {
+		if (current.pier.type == "single") {
+			addSinglePier(id, [x + 30, y + 30]);
+		} else{
+			addDoublePier(id, [x, y + 30]);
+		}
+	}
+	
+	
+	if (typeof current.span.type != "undefined") {
+		if (current.span.type == "single") {
+			addSingleSpan(id, [x, y]);
+		} else {
+			addDoubleSpan(id, [x, y]);
+		}
+	}
+	//addDoublePier(i, [160*i, 40])
+	//addDoubleSpan(i, [160*i, 10])
+}
+lol.stop();
+console.log("Drawn "+data.length);
+//addDoublePier(123,[500]);
+	
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+
+
+d3.selectAll('text.bigtext').call(wrap, 250);
+d3.selectAll('text.normaltext').call(wrap, 30);
+
+function clone_d3_selection(selection, i) {
+            // Assume the selection contains only one object, or just work
+            // on the first object. 'i' is an index to add to the id of the
+            // newly cloned DOM element.
+    var attr = selection.node().attributes;
+    var length = attr.length;
+    var node_name = selection.property("nodeName");
+    var parent = d3.select(selection.node().parentNode);
+    var cloned = parent.append(node_name)
+                 .attr("id", selection.attr("id") + i);
+    for (var j = 0; j < length; j++) { 
+		if (attr[j].nodeName == "id") continue;
+        cloned.attr(attr[j].name,attr[j].value);
+    }
+    return cloned;
+}
+	/*
+container.append("svg:path")
+            .attr("d","m 249.34131,337.47226 -198.244855,-0.0511 c 0,0 -2.168406,-71.57158 -9.547054,-106.59639 C 32.099126,185.96631 0.54837168,100.6359 0.54837168,100.6359 l 138.72764832,0 160.50539,0 c 0,0 -29.41273,84.75998 -39.83489,130.18882 -8.63192,37.62546 -10.60521,106.64754 -10.60521,106.64754 z")
+            .style("stroke-width", 2)
+            .style("stroke", "steelblue")
+            .style("fill", "blue")
+			.attr('id','testing');
+			
+console.log(clone_d3_selection(d3.select('#testing'),'lololol'));*/
+	/*
+d3.tsv("dots.tsv", dottype, function(error, dots) {
+  dot = container.append("g")
+      .attr("class", "dot")
+    .selectAll("circle")
+      .data(dots)
+    .enter().append("circle")
+      .attr("r", 5)
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; })
+      .call(drag);
+});*/
+
+function dottype(d) {
+  d.x = +d.x;
+  d.y = +d.y;
+  return d;
+}
+
+function zoomed() {
+  container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
+
+function dragstarted(d) {
+  d3.event.sourceEvent.stopPropagation();
+  d3.select(this).classed("dragging", true);
+}
+
+function dragged(d) {
+  d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+}
+
+function dragended(d) {
+  d3.select(this).classed("dragging", false);
+}
+
+</script>

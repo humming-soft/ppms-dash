@@ -1,0 +1,112 @@
+<div class="col-md-12 portlet portlet_padu_issuemitigation">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-calendar-check-o" aria-hidden="true"></i>
+			<span class="title">
+				<% if (typeof(data.data) !== "undefined") { %>
+			<% if (typeof(data.data.date) !== "undefined") { %>
+				<% if ((data.data.date).length > 0) { %>
+			    <%=data.title%> <span class="plate_asof">(As of : <%=data.data.date%>) </span>
+				<% } else {%>
+				<%=data.title%>
+			<%} } else {%>
+			<%=data.title%>
+			<% }}else {%>
+			<%=data.title%>
+			<% }%>
+			</span>
+			<span class="plate_asof"></span>
+		</div>
+		<div class="col-md-12 portlet_content">
+			<div class=" height_x1">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="col_separation">Date</th>
+							<th class="col_separation ">Issue and Mitigation</th>
+						</tr>
+					</thead>
+					<tbody>
+					<% if (typeof(data.data.value) !== 'undefined') {
+					  if (typeof(data.data.value[0]) !== 'undefined') {
+
+									for(var i=0; i<(data.data.value).length; i++){%>
+									<tr>
+										<td class=""><%=(typeof(data.data.value[i][0]) !=="undefined")? data.data.value[i][0] : "-"%></td>
+										<td class=""><%=(typeof(data.data.value[i][1]) !=="undefined")? data.data.value[i][1] : "-"%></td>
+									</tr>
+									<%} } else {  %>
+									<tr>
+										<td colspan="4" class="set_center">Nil</td>
+									</tr>
+					               <% }%>
+					  <% } else {%>
+					<tr>
+						<td colspan="4" class="set_center">Nil</td>
+					</tr>
+					<% } %>
+				</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	div.portlet_padu_issuemitigation div.content {
+		background: #252237;
+	}
+	div.portlet_padu_issuemitigation div.portlet_content {
+		padding-top: 10px;
+	}
+	div.portlet_padu_issuemitigation div.portlet_title {
+		color: #fff;
+	}
+
+	div.portlet_padu_issuemitigation thead {
+		background: #111;
+	}
+
+	div.portlet_padu_issuemitigation table {
+		font-size: .9em;
+	}
+
+	/*theader border*/
+	div.portlet_padu_issuemitigation table th {
+		border-bottom: 1px solid #000 !important;
+		font-weight: normal;
+	}
+	div.portlet_padu_issuemitigation table .col_separation {
+		border-right: 2px solid #223;
+	}
+
+	/*tbody border*/
+	div.portlet_padu_issuemitigation table tbody td {
+		border-bottom: 1px solid #669 !important;
+	}
+</style>
+
+<!--
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.portlet_padu_issuemitigation .portlet_title .title').html('Issue and Mitigation');
+		
+		var portlet_padu_issuemitigation_data = [
+			{"d_date":"-","d_issue":"-"},
+			{"d_date":"-","d_issue":"-"},
+			{"d_date":"-","d_issue":"-"},
+			{"d_date":"-","d_issue":"-"},
+			{"d_date":"-","d_issue":"-"},
+			{"d_date":"-","d_issue":"-"},
+			{"d_date":"-","d_issue":"-"}
+		];
+		for (var i = 0; i < portlet_padu_issuemitigation_data.length; i++) {
+			var a = portlet_padu_issuemitigation_data[i];
+			pud_data1 = a.d_date;
+			pud_data2 = a.d_issue;
+			
+			pud_compile = '<tr><td class="">'+pud_data1+'</td><td class="">'+pud_data2+'</td></tr>';
+			$('.portlet_padu_issuemitigation tbody').append(pud_compile);
+		}
+	});
+</script>-->

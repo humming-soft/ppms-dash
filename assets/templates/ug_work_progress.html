@@ -1,0 +1,945 @@
+<div class="col-md-12 portlet portlet_work_progress">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-calendar-check-o" aria-hidden="true"></i>
+			<% if (typeof(data.data.date) !== "undefined") { %>
+			<%=data.title%> <span class="plate_asof"> (As of <%=data.data.date%>)</span>
+			<% } else {%>
+			<%=data.title%>
+			<% } %>
+		</div>
+		<div class="col-md-12 portlet_content">
+			<%
+			var raw = data.data;
+			var levels = {"Station Box": "st","Entrance": "et","Vent Shaft": "vs"};
+			%>
+			<ul class="nav nav-tabs">
+				<li class="show_Station_Box active"><a href="#">Station Box</a></li>
+				<li class="show_Entrance"><a href="#">Entrance</a></li>
+				<li class="show_Vent_Shaft"><a href="#">Vent Shaft</a></li>
+			</ul>
+			
+			<div class="">
+				<div class="table_plate show_Station_Box">
+					<div class="header">
+						<span class="text">Item</span>
+						<span class="value">Progress</span>
+					</div>
+				</div>
+				
+				<!-- -- -->
+				<div class="show show_Station_Box">
+					<%var count = 0; for (var i in raw["Station Box"]) { count++;
+					var row = raw["Station Box"][i];
+					%>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Retaining Structure <%=i%>
+								<!-- <span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span> -->
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+						</div>
+					</div>
+					<%}%>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Excavation
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mezzanine Level</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Concourse Level</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Platform Level</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								RC Structure
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>RC Structure (incl. staircases)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Columns</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Entrance Structure</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Lift Core</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Top Slab (incl. water proofing)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Base Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Opening Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Internal Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>External Walls</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Non Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								ABWF
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Block Walls</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Wall Finish (Painting, Epoxy coat, PSD Cladding, Plaster/Skim Coating)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Door Installation</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Ceiling Finish (Painting)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Stair Finish</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Floor Finish (Screed)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Furnitures, Fixtures & Signages</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Stair Blaustrade</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Excavation
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Drainage System</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Fire Protection System</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Electrical</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>ECS Ducts</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Electrical Services (Cable Tray & Conduits)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>FPS Pipe</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Drainage Pipe</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>ECS System</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>FPS System</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Cold Water Pipes</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>TVS Ducts</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>EL Cable Trays</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>ECS Pipe</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Lifts</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Escalator</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Reinstatement
+								<!-- <span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span> -->
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+						</div>
+					</div>
+				</div>
+				<!-- -- -->
+				
+				<!-- -- -->
+				<div class="hidden show show_Entrance">
+					<span class="show_subtitle">Entrance A</span>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								RC Structure
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>RC Structure (incl. staircases)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Columns</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Entrance Structure</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Lift Core</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Top Slab (incl. water proofing)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Base Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Opening Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Internal Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>External Walls</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Non Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="hidden show show_Entrance">
+					<span class="show_subtitle">Entrance B</span>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Retaining Structure
+								<!-- <span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span> -->
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Excavation
+								<!-- <span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span> -->
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								RC Structure
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>RC Structure (incl. staircases)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Columns</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Entrance Structure</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Lift Core</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Top Slab (incl. water proofing)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Base Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Opening Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Internal Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>External Walls</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Non Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- -- -->
+				
+				<!-- -- -->
+				<div class="hidden show show_Vent_Shaft">
+					<span class="show_subtitle">Vent Shaft A</span>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								RC Structure
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>RC Structure (incl. staircases)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Columns</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Entrance Structure</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Lift Core</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Top Slab (incl. water proofing)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Base Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Opening Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Internal Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>External Walls</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Non Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="hidden show show_Vent_Shaft">
+					<span class="show_subtitle">Vent Shaft B</span>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Retaining Structure
+								<!-- <span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span> -->
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								Excavation
+								<!-- <span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span> -->
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+						</div>
+					</div>
+					<div class="table_plate">
+						<div class="summary">
+							<span class="text">
+								RC Structure
+								<span><a href="#"><i class="hidden fa_title_icon fa fa-minus-square" aria-hidden="true"></i><i class="fa_title_icon fa fa-plus-square" aria-hidden="true"></i></a></span>
+							</span>
+							<span class="value">88%</span>
+						</div>
+						<div class="detail">
+							<table class="hidden table">
+								<thead>
+									<tr>
+										<th rowspan="2">Activity</th>
+										<th rowspan="2" class="set_center">Accumulated</th>
+										<th rowspan="2" class="set_center">Current Week</th>
+										<th colspan="2" class="set_center">Total Progress</th>
+									</tr>
+									<tr>
+										<th class="set_center">Accumulated</th>
+										<th class="set_center">Current Week</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>RC Structure (incl. staircases)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Columns</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Entrance Structure</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Lift Core</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Top Slab (incl. water proofing)</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Base Slab</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Opening Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Internal Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>External Walls</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Non Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+									<tr>
+										<td>Loading Wall</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+										<td class="set_center">88%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- -- -->
+				
+			</div>
+			
+		</div>
+	</div>
+</div>

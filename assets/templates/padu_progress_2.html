@@ -1,0 +1,346 @@
+<div class="col-md-12 portlet portlet_padu_progress">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-hourglass" aria-hidden="true"></i>
+			<span class="title"></span>
+			<span class="plate_asof"></span>
+		</div>
+		<div class="col-md-12 portlet_content portlet_progress pl0">
+			<div class="row">
+				<div class="col-sm-5 col-md-5 portlet_progress_data">
+					<div class="row ml0">
+						<div class="col-md-12 item psd_data_type1">
+							<span class="item_title">Early</span>
+							<span class="item_value iv_early">88%</span>
+						</div>
+						<div class="col-md-12 item psd_data_type1">
+							<span class="item_title">Actual</span>
+							<span class="item_value iv_actual">88%</span>
+						</div>
+						<div class="col-md-12 item psd_data_type1">
+							<span class="item_title">Late</span>
+							<span class="item_value iv_late">88%</span>
+						</div>
+						<div class="col-md-12 item psd_data_type2">
+							<span class="item_title">Variance</span>
+							<div class="">
+								<div class="col-md-6 item">
+									<span class="item_title_variance">Early</span>
+									<span class="item_value_variance iv_early_variance">88%</span>
+								</div>
+								<div class="col-md-6 item">
+									<span class="item_title_variance">Late</span>
+									<span class="item_value_variance iv_late_variance">88%</span>
+								</div>
+							</div>
+							<br><br><br>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-7 col-md-7">
+					<div class="donut">
+						<div class="donut_label">
+							<div class="dl_early">
+								<div class="dl_early_line"></div>
+								<div class="dl_early_title">Early</div>
+								<div class="dl_early_value">100%</div>
+							</div>
+							<div class="dl_actual">
+								<div class="dl_actual_line"></div>
+								<div class="dl_actual_title">Actual</div>
+								<div class="dl_actual_value">100%</div>
+							</div>
+						</div>
+						<div id="padu_donut"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	div.portlet_padu_progress div.content {
+		background: #252237;
+		overflow: hidden;
+	}
+	div.portlet_padu_progress div.portlet_content {
+	}
+	div.portlet_padu_progress div.portlet_title {
+		color: #fff;
+	}
+
+	div.portlet_padu_progress div.row div.item {
+		padding: 3px;
+	}
+
+	div.portlet_padu_progress span.item_title {
+		display: block;
+		font-size: .8em;
+		color: #ddf;
+	}
+	div.portlet_padu_progress span.item_title_variance {
+		display: block;
+		font-size: .8em;
+		color: #aaa;
+	}
+
+	div.portlet_padu_progress span.item_value {
+		display: block;
+		font-size: 1em;
+		color: #fff;
+	}
+
+	div.portlet_padu_progress div.psd_data_type1 {
+		padding: 5px 10px !important;
+		background: rgba(255,255,255,.1);
+	}
+	div.portlet_padu_progress div.psd_data_type2 {
+		padding: 5px 10px !important;
+		background: rgba(255,255,255,.15);
+	}
+
+	div.portlet_padu_progress span.iv_early {
+		padding: 0 0 0 5px;
+		border-left: 3px solid #9f3;
+	}
+	div.portlet_padu_progress span.iv_actual {
+		padding: 0 0 0 5px;
+		border-left: 3px solid #0cf;
+	}
+	div.portlet_padu_progress span.iv_late {
+		padding: 0 0 0 5px;
+		border-left: 3px solid #f59;
+	}
+	div.portlet_padu_progress span.iv_early_variance {
+		padding: 0 0 0 10px;
+		border-left: 3px solid #9f3;
+	}
+	div.portlet_padu_progress span.iv_late_variance {
+		padding: 0 0 0 10px;
+		border-left: 3px solid #f59;
+	}
+
+	div.portlet_padu_progress span.iv_baseline {
+		padding: 0 0 0 5px;
+		border-left: 3px solid #0f9;
+	}
+	div.portlet_padu_progress span.iv_kpitarget {
+		padding: 0 0 0 5px;
+		border-left: 3px solid #b7f;
+	}
+	div.portlet_padu_progress span.iv_shortfall {
+		padding: 0 0 0 5px;
+		border-left: 3px solid #ff0;
+	}
+	div.portlet_padu_progress span.iv_actualprogress {
+		padding: 0 0 0 5px;
+		border-left: 3px solid #f60;
+	}
+
+	div.portlet_padu_progress span.scurve_arrow {
+		padding: 0 5px;
+		font-size: 1.2em;
+		display: block;
+		position: absolute;
+		top: 9px;
+		right: 12px;
+		border-radius: 5px;
+		background: #113;
+	}
+	div.portlet_padu_progress span.scurve_arrow_up {
+		color: #9f3;
+	}
+	div.portlet_padu_progress span.scurve_arrow_down {
+		color: #f59;
+	}
+
+
+	/*donut*/
+	
+	div.donut {
+		border: 1px solid #ff0 !important;
+	}
+	
+	div.portlet_padu_progress #padu_donut {
+		position: absolute !important;
+		left: 50% !important;
+		width: 345px !important;
+		height: 345px !important;
+		border: 1px dashed #f0f !important;
+	}
+	div.portlet_padu_progress #padu_donut div.highcharts-container {
+		position: absolute !important;
+		left: -50% !important;
+		border: 1px solid #00f !important;
+	}
+	
+	div.portlet_padu_progress .donut_label_1 .title {
+		top: 10px !important;
+	}
+	div.portlet_padu_progress .donut_label_1 .value {
+		top: 20px !important;
+		font-size: 2em !important;
+	}
+	
+	
+	/*donut label*/
+	
+	div.portlet_padu_progress div.donut_label {
+		position: absolute !important;
+		left: 50% !important;
+		margin-left: -75px !important;
+		width: 150px !important;
+		height: 300px !important;
+		border: 1px solid #f0f !important;
+	}
+	
+	div.portlet_padu_progress div.donut_label .dl_early,
+	div.portlet_padu_progress div.donut_label .dl_actual {
+		text-align: center !important;
+	}
+	
+		div.portlet_padu_progress div.donut_label .dl_early {
+			position: absolute !important;
+			top: 15px !important;
+			color: #9f3 !important;
+		}
+			div.portlet_padu_progress div.donut_label .dl_early .dl_early_line {
+				position: absolute !important;
+				left: 75px !important;
+				top: 50px !important;
+				width: 2px !important;
+				height: 17px !important;
+				background: #9f3 !important;
+			}
+			div.portlet_padu_progress div.donut_label .dl_early .dl_early_title {
+				position: absolute !important;
+				width: 150px !important;
+				font-size: .8em !important;
+			}
+			div.portlet_padu_progress div.donut_label .dl_early .dl_early_value {
+				position: absolute !important;
+				width: 150px !important;
+				top: 10px !important;
+				font-size: 2em !important;
+			}
+		
+		div.portlet_padu_progress div.donut_label .dl_actual {
+			position: absolute !important;
+			top: 160px !important;
+			color: #0cf !important;
+		}
+			div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_line {
+				position: absolute !important;
+				left: 75px !important;
+				bottom: 0px !important;
+				width: 2px !important;
+				height: 74px !important;
+				background: #0cf !important;
+			}
+			div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_title {
+				position: absolute !important;
+				width: 150px !important;
+				font-size: 1em !important;
+			}
+			div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_value {
+				position: absolute !important;
+				width: 150px !important;
+				top: 10px !important;
+				font-size: 3em !important;
+			}
+		
+	
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.portlet_padu_progress .portlet_title .title').html('Progress Overview');
+		
+		
+		var portlet_padu_progress_early = 71;
+		var portlet_padu_progress_actual = 58;
+		var portlet_padu_progress_late = 69;
+		var portlet_padu_progress_variance_early = portlet_padu_progress_actual-portlet_padu_progress_early;
+		var portlet_padu_progress_variance_late = portlet_padu_progress_actual-portlet_padu_progress_late;
+		
+		$('.portlet_padu_progress .item_value.iv_early').html(portlet_padu_progress_early+'%');
+		$('.portlet_padu_progress .item_value.iv_actual').html(portlet_padu_progress_actual+'%');
+		$('.portlet_padu_progress .item_value.iv_late').html(portlet_padu_progress_late+'%');
+		$('.portlet_padu_progress .item_value.iv_early_variance').html(portlet_padu_progress_variance_early+'%');
+		$('.portlet_padu_progress .item_value.iv_late_variance').html(portlet_padu_progress_variance_late+'%');
+		$('.portlet_padu_progress .dl_early_value').html(portlet_padu_progress_early+'%');
+		$('.portlet_padu_progress .dl_actual_value').html(portlet_padu_progress_actual+'%');
+		
+		Highcharts.chart('padu_donut', {
+			chart: {
+				type: 'pie'
+			},
+			title: {
+				text: ''
+			},
+			yAxis: {
+				title: {
+					text: ''
+				}
+			},
+			plotOptions: {
+				pie: {
+					shadow: false,
+					center: ['50%', '60%'],
+					dataLabels: {
+						enabled: false,
+					}
+				}
+			},
+			tooltip: {
+				enabled:false,
+				valueSuffix: '%'
+			},
+			series: [{
+				name: 'Browsers',
+				data: [0],
+				size: '0%',
+				dataLabels: {
+					formatter: function() {
+						return this.y > 5 ? this.point.name : null;
+					},
+					color: 'white',
+					distance: -30
+				}
+			}, {
+				name: 'Early',
+				colors: ['#9f3','rgba(0,255,100,.075)'],
+				data: [portlet_padu_progress_early,100-portlet_padu_progress_early],
+				size: '80%',
+				innerSize: '95%',
+				dataLabels: {
+					formatter: function() {
+						return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +'%'  : null;
+					}
+				}
+			}, {
+				name: 'Late',
+				colors: ['#0cf','rgba(0,100,255,.075)'],
+				data: [portlet_padu_progress_actual,100-portlet_padu_progress_actual],
+				size: '73%',
+				innerSize: '85%',
+				dataLabels: {
+					formatter: function() {
+						return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +'%'  : null;
+					}
+				}
+			}],
+			credits: {
+				enabled: false
+			}
+		});
+		
+		
+		
+		
+		
+		
+		
+	});
+</script>

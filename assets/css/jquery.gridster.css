@@ -1,0 +1,348 @@
+/*! gridster.js - v0.5.5 - 2014-07-25
+* http://gridster.net/
+* Copyright (c) 2014 ducksboard; Licensed MIT */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.gridster {
+    position:relative;
+}
+
+.gridster > * {
+    margin: 0 auto;
+    -webkit-transition: height .4s, width .4s;
+    -moz-transition: height .4s, width .4s;
+    -o-transition: height .4s, width .4s;
+    -ms-transition: height .4s, width .4s;
+    transition: height .4s, width .4s;
+}
+
+.gridster .gs-w {
+    /*z-index: 2;*/
+    position: absolute;
+	list-style: none;
+	overflow: hidden;
+	/*overflow-y: scroll;*/
+	padding: 0px 4px;
+	/*border: 1px solid rgba(136, 136, 136, 0.19);*/
+}
+
+.ready .gs-w:not(.preview-holder) {
+    -webkit-transition: opacity .3s, left .3s, top .3s;
+    -moz-transition: opacity .3s, left .3s, top .3s;
+    -o-transition: opacity .3s, left .3s, top .3s;
+    transition: opacity .3s, left .3s, top .3s;
+}
+
+.ready .gs-w:not(.preview-holder),
+.ready .resize-preview-holder {
+    -webkit-transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+    -moz-transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+    -o-transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+    transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+}
+
+.gridster .preview-holder {
+    z-index: 1;
+    position: absolute;
+    background-color: #fff;
+    border-color: #fff;
+    opacity: 0.3;
+}
+
+.gridster .player-revert {
+    z-index: 10!important;
+    -webkit-transition: left .3s, top .3s!important;
+    -moz-transition: left .3s, top .3s!important;
+    -o-transition: left .3s, top .3s!important;
+    transition:  left .3s, top .3s!important;
+}
+
+.gridster .dragging,
+.gridster .resizing {
+    z-index: 10!important;
+    -webkit-transition: all 0s !important;
+    -moz-transition: all 0s !important;
+    -o-transition: all 0s !important;
+    transition: all 0s !important;
+}
+
+
+.gs-resize-handle {
+    position: absolute;
+    z-index: 1;
+}
+
+.gs-resize-handle-both {
+    width: 20px;
+    height: 20px;
+    bottom: -8px;
+    right: -8px;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIEZpcmV3b3JrcyBDUzYsIEV4cG9ydCBTVkcgRXh0ZW5zaW9uIGJ5IEFhcm9uIEJlYWxsIChodHRwOi8vZmlyZXdvcmtzLmFiZWFsbC5jb20pIC4gVmVyc2lvbjogMC42LjEgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgaWQ9IlVudGl0bGVkLVBhZ2UlMjAxIiB2aWV3Qm94PSIwIDAgNiA2IiB2ZXJzaW9uPSIxLjEiDQoJeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSINCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjZweCIgaGVpZ2h0PSI2cHgiDQo+DQoJPGcgb3BhY2l0eT0iMC41Ij4NCgkJPHBhdGggZD0iTSA2IDYgTCAwIDYgTCAwIDQuMiBMIDQgNC4yIEwgNC4yIDQuMiBMIDQuMiAwIEwgNiAwIEwgNiA2IEwgNiA2IFoiIGZpbGw9IiNDQ0NDQ0MiLz4NCgk8L2c+DQo8L3N2Zz4=');
+    background-position: top left;
+    background-repeat: no-repeat;
+    cursor: se-resize;
+    z-index: 20;
+}
+
+.gs-resize-handle-x {
+    top: 0;
+    bottom: 13px;
+    right: -5px;
+    width: 10px;
+    cursor: e-resize;
+}
+
+.gs-resize-handle-y {
+    left: 0;
+    right: 13px;
+    bottom: -5px;
+    height: 10px;
+    cursor: s-resize;
+}
+
+.gs-w:hover .gs-resize-handle,
+.resizing .gs-resize-handle {
+    opacity: 1;
+}
+
+.gs-resize-handle,
+.gs-w.dragging .gs-resize-handle {
+    opacity: 0;
+}
+
+.gs-resize-disabled .gs-resize-handle {
+    display: none!important;
+}
+
+[data-max-sizex="1"] .gs-resize-handle-x,
+[data-max-sizey="1"] .gs-resize-handle-y,
+[data-max-sizey="1"][data-max-sizex="1"] .gs-resize-handle {
+    display: none !important;
+}
+
+
+
+.gridster .gs-w  header.editing {
+    background: transparent;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 9px;
+    font-size: 10px;
+    line-height: normal;
+    padding: 4px 0 6px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+    /* width: 72px; */
+    /* height: 31px; */
+    z-index: 2;
+}
+
+.gridster .gs-w header.editing .header-button {
+    /* width: 28px; */
+    padding: 0 5px;
+    /* height: 24px; */
+    margin-right: 5px;
+    display: block;
+    float: right;
+    background: #000f1e;
+    border: 1px solid #1E2B38;
+    color: #e7e6e6;
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.gridster .gs-w header.editing .header-button-edit{
+    color: #3399ff;
+}
+
+.header-button.header-button-move { cursor: move; }
+/*
+ [data-col="13"] { left:100%; }
+ [data-col="12"] { left:91.66666666666666%; }
+ [data-col="11"] { left:83.33333333333334%; }
+ [data-col="10"] { left:75%; }
+ [data-col="9"] { left:66.66666666666666%; }
+ [data-col="8"] { left:58.333333333333336%; }
+ [data-col="7"] { left:50%; }
+ [data-col="6"] { left:41.66666666666667%; }
+ [data-col="5"] { left:33.33333333333333%; }
+ [data-col="4"] { left:25%; }
+ [data-col="3"] { left:16.666666666666664%; }
+ [data-col="2"] { left:8.333333333333332%; }
+ [data-col="1"] { left:0%; }
+ [data-row="76"] { top:3380px; }
+ [data-row="75"] { top:3335px; }
+ [data-row="74"] { top:3290px; }
+ [data-row="73"] { top:3245px; }
+ [data-row="72"] { top:3200px; }
+ [data-row="71"] { top:3155px; }
+ [data-row="70"] { top:3110px; }
+ [data-row="69"] { top:3065px; }
+ [data-row="68"] { top:3020px; }
+ [data-row="67"] { top:2975px; }
+ [data-row="66"] { top:2930px; }
+ [data-row="65"] { top:2885px; }
+ [data-row="64"] { top:2840px; }
+ [data-row="63"] { top:2795px; }
+ [data-row="62"] { top:2750px; }
+ [data-row="61"] { top:2705px; }
+ [data-row="60"] { top:2660px; }
+ [data-row="59"] { top:2615px; }
+ [data-row="58"] { top:2570px; }
+ [data-row="57"] { top:2525px; }
+ [data-row="56"] { top:2480px; }
+ [data-row="55"] { top:2435px; }
+ [data-row="54"] { top:2390px; }
+ [data-row="53"] { top:2345px; }
+ [data-row="52"] { top:2300px; }
+ [data-row="51"] { top:2255px; }
+ [data-row="50"] { top:2210px; }
+ [data-row="49"] { top:2165px; }
+ [data-row="48"] { top:2120px; }
+ [data-row="47"] { top:2075px; }
+ [data-row="46"] { top:2030px; }
+ [data-row="45"] { top:1985px; }
+ [data-row="44"] { top:1940px; }
+ [data-row="43"] { top:1895px; }
+ [data-row="42"] { top:1850px; }
+ [data-row="41"] { top:1805px; }
+ [data-row="40"] { top:1760px; }
+ [data-row="39"] { top:1715px; }
+ [data-row="38"] { top:1670px; }
+ [data-row="37"] { top:1625px; }
+ [data-row="36"] { top:1580px; }
+ [data-row="35"] { top:1535px; }
+ [data-row="34"] { top:1490px; }
+ [data-row="33"] { top:1445px; }
+ [data-row="32"] { top:1400px; }
+ [data-row="31"] { top:1355px; }
+ [data-row="30"] { top:1310px; }
+ [data-row="29"] { top:1265px; }
+ [data-row="28"] { top:1220px; }
+ [data-row="27"] { top:1175px; }
+ [data-row="26"] { top:1130px; }
+ [data-row="25"] { top:1085px; }
+ [data-row="24"] { top:1040px; }
+ [data-row="23"] { top:995px; }
+ [data-row="22"] { top:950px; }
+ [data-row="21"] { top:905px; }
+ [data-row="20"] { top:860px; }
+ [data-row="19"] { top:815px; }
+ [data-row="18"] { top:770px; }
+ [data-row="17"] { top:725px; }
+ [data-row="16"] { top:680px; }
+ [data-row="15"] { top:635px; }
+ [data-row="14"] { top:590px; }
+ [data-row="13"] { top:545px; }
+ [data-row="12"] { top:500px; }
+ [data-row="11"] { top:455px; }
+ [data-row="10"] { top:410px; }
+ [data-row="9"] { top:365px; }
+ [data-row="8"] { top:320px; }
+ [data-row="7"] { top:275px; }
+ [data-row="6"] { top:230px; }
+ [data-row="5"] { top:185px; }
+ [data-row="4"] { top:140px; }
+ [data-row="3"] { top:95px; }
+ [data-row="2"] { top:50px; }
+ [data-row="1"] { top:5px; }
+ [data-sizey="1"] { height:35px; }
+ [data-sizey="2"] { height:80px; }
+ [data-sizey="3"] { height:125px; }
+ [data-sizey="4"] { height:170px; }
+ [data-sizey="5"] { height:215px; }
+ [data-sizey="6"] { height:260px; }
+ [data-sizey="7"] { height:305px; }
+ [data-sizey="8"] { height:350px; }
+ [data-sizey="9"] { height:395px; }
+ [data-sizey="10"] { height:440px; }
+ [data-sizey="11"] { height:485px; }
+ [data-sizey="12"] { height:530px; }
+ [data-sizey="13"] { height:575px; }
+ [data-sizey="14"] { height:620px; }
+ [data-sizey="15"] { height:665px; }
+ [data-sizey="16"] { height:710px; }
+ [data-sizey="17"] { height:755px; }
+ [data-sizey="18"] { height:800px; }
+ [data-sizey="19"] { height:845px; }
+ [data-sizey="20"] { height:890px; }
+ [data-sizey="21"] { height:935px; }
+ [data-sizey="22"] { height:980px; }
+ [data-sizey="23"] { height:1025px; }
+ [data-sizey="24"] { height:1070px; }
+ [data-sizey="25"] { height:1115px; }
+ [data-sizey="26"] { height:1160px; }
+ [data-sizey="27"] { height:1205px; }
+ [data-sizey="28"] { height:1250px; }
+ [data-sizey="29"] { height:1295px; }
+ [data-sizey="30"] { height:1340px; }
+ [data-sizey="31"] { height:1385px; }
+ [data-sizey="32"] { height:1430px; }
+ [data-sizey="33"] { height:1475px; }
+ [data-sizey="34"] { height:1520px; }
+ [data-sizey="35"] { height:1565px; }
+ [data-sizey="36"] { height:1610px; }
+ [data-sizey="37"] { height:1655px; }
+ [data-sizey="38"] { height:1700px; }
+ [data-sizey="39"] { height:1745px; }
+ [data-sizey="40"] { height:1790px; }
+ [data-sizey="41"] { height:1835px; }
+ [data-sizey="42"] { height:1880px; }
+ [data-sizey="43"] { height:1925px; }
+ [data-sizey="44"] { height:1970px; }
+ [data-sizey="45"] { height:2015px; }
+ [data-sizey="46"] { height:2060px; }
+ [data-sizey="47"] { height:2105px; }
+ [data-sizey="48"] { height:2150px; }
+ [data-sizey="49"] { height:2195px; }
+ [data-sizey="50"] { height:2240px; }
+ [data-sizey="51"] { height:2285px; }
+ [data-sizey="52"] { height:2330px; }
+ [data-sizey="53"] { height:2375px; }
+ [data-sizey="54"] { height:2420px; }
+ [data-sizey="55"] { height:2465px; }
+ [data-sizey="56"] { height:2510px; }
+ [data-sizey="57"] { height:2555px; }
+ [data-sizey="58"] { height:2600px; }
+ [data-sizey="59"] { height:2645px; }
+ [data-sizey="60"] { height:2690px; }
+ [data-sizey="61"] { height:2735px; }
+ [data-sizey="62"] { height:2780px; }
+ [data-sizey="63"] { height:2825px; }
+ [data-sizey="64"] { height:2870px; }
+ [data-sizey="65"] { height:2915px; }
+ [data-sizey="66"] { height:2960px; }
+ [data-sizey="67"] { height:3005px; }
+ [data-sizey="68"] { height:3050px; }
+ [data-sizey="69"] { height:3095px; }
+ [data-sizey="70"] { height:3140px; }
+ [data-sizey="71"] { height:3185px; }
+ [data-sizey="72"] { height:3230px; }
+ [data-sizey="73"] { height:3275px; }
+ [data-sizey="74"] { height:3320px; }
+ [data-sizey="75"] { height:3365px; }*/
+ [data-sizex="1"] { width:8.333333333333332%; }
+ [data-sizex="2"] { width:16.666666666666664%; }
+ [data-sizex="3"] { width:25%; }
+ [data-sizex="4"] { width:33.33333333333333%; }
+ [data-sizex="5"] { width:41.66666666666667%; }
+ [data-sizex="6"] { width:50%; }
+ [data-sizex="7"] { width:58.333333333333336%; }
+ [data-sizex="8"] { width:66.66666666666666%; }
+ [data-sizex="9"] { width:75%; }
+ [data-sizex="10"] { width:83.33333333333334%; }
+ [data-sizex="11"] { width:91.66666666666666%; }
+ [data-sizex="12"] { width:100%; }
+.testclass { background: #ccc }
+
+/* Uncomment this if you set helper : "clone" in draggable options */
+/*.gridster .player {
+  opacity:0;
+}
+*/

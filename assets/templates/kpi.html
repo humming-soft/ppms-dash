@@ -1,0 +1,114 @@
+<!--<div class="col-md-12 portlet portlet_kpi">
+    <div class="row content">
+        <div class="col-md-12 portlet_title">
+            <i class="fa_title_icon fa fa-pie-chart" aria-hidden="true"></i>
+            <%=data.title%>
+            &lt;!&ndash;<span class="plate_asof">(As of : 3rd July 2016)</span>&ndash;&gt;
+        </div>
+        <div class="col-md-12 portlet_content">
+            <a href="javascript:void(0)" onClick="loadPage('<%=data.data.url%>')">
+            <div class="col-md-3 halfdonut">
+                <div class="content">
+                    <div id="chart_0" style="overflow: hidden;"></div>
+                </div>
+                <span class="title kpi" id="p0"></span>
+            </div>
+            <div class="col-md-3 halfdonut">
+                <div class="content">
+                    <div id="chart_1" style="overflow: hidden;"></div>
+                </div>
+                <span class="title kpi" id="p1"></span>
+            </div>
+            <div class="col-md-3 halfdonut">
+                <div class="content">
+                    <div id="chart_2" style="overflow: hidden;"></div>
+                </div>
+                <span class="title kpi" id="p2"></span>
+            </div>
+            <div class="col-md-3 halfdonut">
+                <div class="content">
+                    <div id="chart_3" style="overflow: hidden;"></div>
+                </div>
+                <span class="title kpi" id="p3"></span>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>-->
+
+<div class="col-md-12 portlet portlet_kpi">
+    <div class="row content">
+        <div class="col-md-12 portlet_title">
+            <i class="fa_title_icon fa fa-pie-chart" aria-hidden="true"></i>
+            <% if (typeof(data.data[0]) !== "undefined") { %>
+            <% if (typeof(data.data[0].date) !== "undefined") { %>
+                <%=data.title%> <span class="plate_asof">(As of : <%=data.data[0].date%>) </span>
+            <% } else {%>
+                <%=data.title%>
+            <% }}else {%>
+                <%=data.title%>
+            <% }%>
+        </div>
+        <div class="col-md-12 portlet_content">
+            <div class="">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="col_separation">Title</th>
+                        <th class="col_separation set_center">Baseline</th>
+                        <th class="col_separation set_center">KPI Target</th>
+                        <th class="col_separation set_center">Actual</th>
+                        <th class="col_separation set_center">Shortfall</th>
+                        <th class="col_separation set_center">Actual Progress</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%if (data.data.length == 0) {%>
+                        <tr><td colspan="6" style="text-align: center;">Nil</td></tr>
+                    <%}%>
+                    <%for (var i in data.data) { if(Object.prototype.toString.call(data.data[i]) == "[object Object]") { /*Do nothing*/} else {%>
+                    <%
+                    var actual = data.data[i][3];
+                    var target = data.data[i][2];
+                    var baseline = data.data[i][1];
+
+                    var checkdata3 = (data.data[i][3] == parseInt(data.data[i][3]));
+                    var checkdata2 = (data.data[i][2] == parseInt(data.data[i][2]));
+                    var checkdata1 = (data.data[i][1] == parseInt(data.data[i][1]));
+
+                    var progress = 'N/A';
+                    var overall = 'N/A';
+                    var shortfall = 'N/A';
+                    /*
+                    if(baseline != 0)
+                    overall = Math.round((actual/baseline)*100) + "%";
+                    if(target != 0){
+                    progress = ((actual/baseline)*100).toFixed(1) + "%";
+                    if(target != "-")
+                    shortfall = actual - target;
+                    }
+                    */
+                    if((baseline != 0) && (checkdata3 == true) && (checkdata1 == true)){
+                    overall = ((actual/baseline)*100).toFixed(1) + "%";
+                    console.log(checkdata3 == true) && (checkdata2 == true);
+                    }
+                    if((target > 0) && (checkdata3 == true) && (checkdata2 == true)){
+                    shortfall = actual - target;
+                    }
+                    %>
+                        <tr>
+                            <td class=""><%=data.data[i][0]%></td>
+                            <td class="set_center baseline"><%=String.prototype.numberWithCommas(data.data[i][1])%></td>
+                            <td class="set_center target"><%=String.prototype.numberWithCommas(data.data[i][2])%></td>
+                            <td class="set_center actual"><%=String.prototype.numberWithCommas(data.data[i][3])%></td>
+                            <td class="set_center shortfall"><%=String.prototype.numberWithCommas(shortfall)%></td>
+                            <td class="set_center actual"><%=overall%></td>
+                        </tr>
+                    <%}}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

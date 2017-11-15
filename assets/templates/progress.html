@@ -1,0 +1,55 @@
+<div class="col-md-12 portlet portlet_progress">
+    <div class="row content">
+        <div class="col-md-12 portlet_title">
+            <i class="fa_title_icon fa fa-hourglass" aria-hidden="true"></i>
+            Progress
+            <span class="plate_asof"><!--(As of : 3rd July 2016)--></span>
+        </div>
+        <div class="col-md-12 portlet_content portlet_progress pl0">
+            <div class="row">
+                <div class="col-md-5 portlet_progress_data">
+                    <div class="row ml0">
+                        <div class="col-md-12 item psd_data_type1">
+                            <span class="item_title">Early</span>
+                            <span class="item_value iv_early"><%=(typeof data.data.currentEarly == 'undefined')?'0%':data.data.currentEarly%></span>
+                        </div>
+                        <div class="col-md-12 item psd_data_type1">
+                            <span class="item_title">Actual</span>
+                            <span class="item_value iv_late"><%=(typeof data.data.currentActual == 'undefined')?'0%':data.data.currentActual%></span>
+                        </div>
+                        <div class="col-md-12 item psd_data_type1">
+                            <span class="item_title">Late</span>
+                            <span class="item_value iv_actual"><%=(typeof data.data.currentLate == 'undefined')?'0%':data.data.currentLate%></span>
+                        </div>
+                        <div class="col-md-12 item psd_data_type2">
+                            <span class="item_title">Variance</span>
+                            <div class="">
+                                <div class="col-md-6 item">
+                                    <span class="item_title_variance">Early</span>
+                                    <span class="item_value_variance iv_early"><%=(typeof data.data.varEarly == 'undefined')?'0%':data.data.varEarly%></span>
+                                </div>
+                                <div class="col-md-6 item">
+                                    <span class="item_title_variance">Late</span>
+                                    <span class="item_value_variance iv_actual"><%=(typeof data.data.varLate == 'undefined')?'0%':data.data.varLate%></span>
+                                </div>
+                            </div>
+                            <br><br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="content">
+                        <div style="overflow: hidden;" id="chart_<%=data.id%>"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="col-md-5">-->
+    <!--<div class="row">-->
+        <!--<div class="content">-->
+            <!--<div style="height: 90%;" id="chart_<%=data.id%>">></div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->

@@ -1,0 +1,264 @@
+
+.sizecorrection {
+    -webkit-transform: translate(0px, 110.611726px) rotate(0rad) skewX(0rad) scale(1.430914, 1.430914);
+    -webkit-transform-origin: 960px 477.5px;
+    transform: translate(0px, 110.611726px) rotate(0rad) skewX(0rad) scale(1.430914, 1.430914);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #131724;;
+    overflow:hidden;
+}
+
+#container {
+    width: 1280px;
+    height: 800px;
+    overflow: hidden;
+}
+
+
+svg .smallcircle {
+    fill: #cccccc;
+}
+
+svg .bigcircle {
+    fill: hsl(0, 3%, 30%);
+}
+
+svg .bigparking {
+    fill: hsl(0, 3%, 30%);
+}
+
+svg .smallparking {
+    fill: #cccccc;
+}
+
+svg .glow-red.on {
+    fill: hsl(0, 100%, 43%);
+}
+
+svg .glow-green.on {
+    fill: hsl(134, 82%, 30%);
+}
+
+svg .glow-yellow.on {
+    fill: rgb(255, 170, 66);
+}
+
+svg .glow-grey.on {
+    fill: #fff;
+}
+
+svg .parkingletter {
+    fill: #000;
+    font-family: "Century Gothic";
+    font-size: 10px;
+    font-weight: bold;
+}
+
+svg .blurred {
+    opacity: 0.2;
+}
+
+
+.glow-yellow {
+    /*-webkit-animation-name: glow-yellow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+
+    animation-name: glow-yellow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;*/
+}
+
+@-webkit-keyframes glow-yellow {
+    0% { fill: hsl(59, 100%, 23%); }
+    100% { fill: hsl(59, 100%, 43%); }
+}
+
+@keyframes glow-yellow {
+    0% { fill: hsl(59, 100%, 23%); }
+    100% { fill: hsl(59, 100%, 43%); }
+}
+.navbaricon {
+    width: 80px;
+}
+
+/*@-webkit-keyframes glow-blue {
+  0% { fill: hsl(204, 80%, 23%); }
+  100% { fill: hsl(204, 80%, 63%); }
+}
+
+@keyframes glow-blue {
+  0% { fill: hsl(204, 80%, 23%); }
+  100% { fill: hsl(204, 80%, 63%); }
+}*/
+
+
+
+
+
+#navbar {
+    text-align: center;
+    position: absolute;
+    top: -52px;
+    left: 139px;
+}
+
+#navbar a, figure {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-right: -2px;
+}
+
+#navbar figcaption {
+    font-size: 11px;
+    margin: 0;
+    font-family: Arial;
+    font-weight: bold;
+    color: #fff;
+}
+
+#navbar figure {
+    padding: 5px;
+    width: 90px;
+}
+
+#navbar figure:hover img {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+#navbar img {
+    width: 80px;
+    transition: transform 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+}
+
+#navbar a.nopointer {
+    cursor: default;
+}
+.nav {
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    left: 48px;
+}
+
+.nav li {
+    position: relative;
+    display: inline-block;
+    margin-right: -4px; /* See: http://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
+}
+/*
+			.nav li:before {
+			  content: "";
+			  display: block;
+			  border-top: 1px solid #ddd;
+			  border-bottom: 1px solid #fff;
+			  width: 100%;
+			  height: 1px;
+			  position: absolute;
+			  top: 50%;
+			  z-index: -1;
+			}*/
+
+.nav a {
+    display: block;
+    background-color: #313f60;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#313f60), to(#414F70));
+    background-image: -webkit-linear-gradient(top, #313f60, #414F70);
+    background-image: -moz-linear-gradient(top, #313f60, #414F70);
+    background-image: -ms-linear-gradient(top, #313f60, #414F70);
+    background-image: -o-linear-gradient(top, #313f60, #414F70);
+    color: #ccc;
+    margin-right: 22px;
+    width: 90px;
+    height: 90px;
+    line-height: 105px;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 3px #212f50;
+    text-decoration:none;
+}
+
+.nav a:before {
+    content: "";
+    display: block;
+    /*background: #111;
+    border-top: 2px solid #111;*/
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    bottom: -18px;
+    right: -18px;
+    z-index: -1;
+    border-radius: 50%;
+    /*box-shadow: inset 0px 8px 48px #111;*/
+}
+
+.nav a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #515F80;
+}
+
+.nav i {
+    font-size:44px;
+
+}
+
+.togglebutton {
+    position:absolute;
+    width: 100px;
+    height:20px;
+    z-index: 5;
+}
+
+.togglebutton:hover, #reset:hover, #reset2:hover, #reset3:hover {
+    cursor: pointer;
+}
+
+.header-left {
+    font-family: Trebuchet MS;  float:left;
+    color: #f3b308;
+}
+
+.subheader-left {
+    font-family: Trebuchet MS;
+    float: left;
+    padding-top: 29px;
+    padding-left: 8px;
+    font-size: 35px;
+    color: rgb(255, 170, 66);
+}
+
+.pkg_title{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #FFF;
+}
+.pkg_title2{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #a6c3ff;
+}

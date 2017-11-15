@@ -1,0 +1,44 @@
+<div class="col-md-12 portlet portlet_padu_wbs">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-bar-chart" aria-hidden="true"></i>
+			<span class="title">
+				<% if (typeof(data.data) !== "undefined") { %>
+			<% if (typeof(data.data.date[0]) !== "undefined") { %>
+			<%=data.title%> <span class="plate_asof">(As of : <%=data.data.date[0]%>) </span>
+			<% } else {%>
+			<%=data.title%>
+			<% }}else {%>
+			<%=data.title%>
+			<% }%>
+			</span>
+		</div>
+		<div class="col-md-12 portlet_content">
+			<div class="row highcharts_inside">
+				<div class="col-md-12">
+					<div class="chart chart-scurve" id="portlet_padu_wbs"></div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<style type="text/css">
+	div.portlet_padu_wbs div.content {
+		background: #252237;
+	}
+
+	div.portlet_padu_wbs svg text {
+		fill:#fff!important;
+		font-size: 13px!important;
+	}
+
+	div.portlet_padu_wbs #portlet_padu_wbs {
+		padding: 20px 20px 20px 0;
+		height: 350px;
+	}
+</style>
+
+

@@ -1,0 +1,43 @@
+<div class="col-md-12 portlet portlet_info">
+    <div class="row content">
+        <div class="col-md-12 portlet_title">
+            <i class="fa_title_icon fa fa-info-circle" aria-hidden="true"></i>
+            <%=data.title%>
+        </div>
+        <div class="col-md-12 portlet_content">
+            <div class="pc_top">
+                <span class="info_title"><%=data.data.name%></span>
+            </div>
+            <div class="row pc_bottom">
+                <span class="info_subtitle"> <%=data.data.contractor%></span><br>
+                <div class="col-md-6">
+                    <% if(typeof data.data.station != "undefined"){%>
+                    <span class="item_title">Station</span>
+                    <%_.each(data.data.station, function(i) {%>
+                        <span class="item_value iv_station"><i class="fa fa-train" aria-hidden="true"></i><%=i%></span>
+                    <%})}%>
+                </div>
+                <div class="col-md-6">
+                    <% if(typeof data.data.mspr != "undefined"){
+                        if(data.data.mspr.length > 0){%>
+                     <span class="item_title">MSPR</span>
+                    <%_.each(data.data.mspr, function(i) {%>
+                        <span class="item_value iv_mspr"><i class="fa fa-car" aria-hidden="true"></i><%=i%></span>
+                    <%})}}%>
+                    <% if(typeof data.data.depot != "undefined"){
+                    if(data.data.depot.length > 0){%>
+                    <span class="item_title">Depot</span>
+                    <%_.each(data.data.depot, function(i) {%>
+                    <span class="item_value iv_mspr"><i class="fa fa-train" aria-hidden="true"></i><%=i%></span>
+                    <%})}}%>
+                </div>
+                <% if(typeof data.data.url != "undefined"){%>
+                <div class="pier_chart">
+                    <a href="javascript:void(0)" onClick="loadPage('<%=data.data.url%>')"><span class="item_value iv_pierchart"><i class="fa fa-map" aria-hidden="true"></i> Pier Chart</span></a>
+                </div>
+                <%}%>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

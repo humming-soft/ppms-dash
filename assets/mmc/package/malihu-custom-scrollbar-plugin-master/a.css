@@ -1,0 +1,17 @@
+html{
+	background: #333;
+}
+
+/*-----*/
+
+
+#demo.showcase {
+	min-width: 740px;
+}
+
+.showcase .content{
+	float: left;
+	width: 340px;
+	height: 300px;
+}
+

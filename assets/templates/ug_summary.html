@@ -1,0 +1,52 @@
+<div class="col-md-12 portlet portlet_summary">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-circle-o-notch" aria-hidden="true"></i>
+			<% console.log(data.data);%>
+			<% if (typeof(data.data) !=="undefined"){%>
+			<% if (typeof(data.data.date) !== "undefined") { %>
+			<%=data.title%> <span class="plate_asof">(As of : <%=data.data.date%>) </span>
+			<% } else {%>
+			<%=data.title%>
+			<% }}else {%>
+			<%=data.title%>
+			<% }%>
+
+		</div>
+		<div class="col-md-12 portlet_content">
+			<div class="">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="col_separation col-md-3">Underground Station</th>
+							<th class="col_separation col-md-3">Actual Progress</th>
+						</tr>
+					</thead>
+					<tbody>
+					<%
+					for (var p in data.data) {
+					%>
+					<tr>
+						<% if (p !== "date") { %>
+						<td class=""><%=p%></td>
+						<% if (typeof(data.data[p].progress) !== "undefined") { %>
+						<td  class="val_actual"><%=data.data[p].progress%>%</td>
+						<% } else {%>
+						<td  class="val_actual">0.00%</td>
+						<% } %>
+						<% }%>
+					</tr>
+					<%}%>
+					<%
+					if (data.data.length == 0){
+					%>
+					<tr>
+						<td colspan="2" style="text-align: center">Nil</td>
+					</tr>
+					<%}%>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

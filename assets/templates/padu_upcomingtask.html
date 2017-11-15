@@ -1,0 +1,110 @@
+<div class="col-md-12 portlet portlet_padu_upcomingtask">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-calendar-check-o" aria-hidden="true"></i>
+			<span class="title">
+				<% if (typeof(data.data) !== "undefined") { %>
+		        <% if (typeof(data.data.date) !== "undefined") { %>
+		        <%=data.title%> <span class="plate_asof">(As of : <%=data.data.date%>) </span>
+		        <% } else {%>
+		        <%=data.title%>
+				<% }}else {%>
+		        <%=data.title%>
+		        <% }%>
+			</span>
+			<span class="plate_asof"></span>
+		</div>
+
+
+		<div class="col-md-12 portlet_content">
+			<div class=" height_x1">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="col-sm-6 col-md-6 col_separation">Tasks</th>
+							<th class="col-sm-2 col-md-2 col_separation set_center">Duration</th>
+							<th class="col-sm-2 col-md-2 col_separation set_center">Start Date</th>
+							<th class="col-sm-2 col-md-2 col_separation set_center">End Date</th>
+						</tr>
+					</thead>
+					<tbody>
+					<% if(typeof(data.data.value) !== "undefined"){
+					for(var i=0; i<(data.data.value).length; i++){%>
+					<tr>
+						<td class=""><%=(typeof(data.data.value[i][0]) !=="undefined")? data.data.value[i][0] : "-"%></td>
+						<td class="set_center"><%=(typeof(data.data.value[i][1]) !=="undefined")? data.data.value[i][1] : "-"%></td>
+						<td class="set_center"><%=(typeof(data.data.value[i][2]) !=="undefined")? data.data.value[i][2] : "-"%></td>
+						<td class="set_center"><%=(typeof(data.data.value[i][3]) !=="undefined")? data.data.value[i][3] : "-"%></td>
+					</tr>
+					<%} } else {  %>
+					<tr>
+						<td colspan="4" class="set_center">Nil</td>
+					</tr>
+					<% } %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	div.portlet_padu_upcomingtask div.content {
+		background: #252237;
+	}
+	div.portlet_padu_upcomingtask div.portlet_content {
+		padding-top: 10px;
+	}
+	div.portlet_padu_upcomingtask div.portlet_title {
+		color: #fff;
+	}
+
+	div.portlet_padu_upcomingtask thead {
+		background: #111;
+	}
+
+	div.portlet_padu_upcomingtask table {
+		font-size: .9em;
+	}
+
+	/*theader border*/
+	div.portlet_padu_upcomingtask table th {
+		border-bottom: 1px solid #000 !important;
+		font-weight: normal;
+	}
+	div.portlet_padu_upcomingtask table .col_separation {
+		border-right: 2px solid #223;
+	}
+
+	/*tbody border*/
+	div.portlet_padu_upcomingtask table tbody td {
+		border-bottom: 1px solid #669 !important;
+	}
+</style>
+
+<!--
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.portlet_padu_upcomingtask .portlet_title .title').html('Upcoming Tasks');
+		
+		var portlet_padu_upcomingtask_data = [
+			{"d_task":"Data Management ","d_duration":"10 days","d_start":"Mon 06-11-17","d_end":"Fri 17-11-17"},
+			{"d_task":"ETL ","d_duration":"10 days","d_start":"Mon 06-11-17","d_end":"Fri 17-11-17"},
+			{"d_task":"Configuration of Repository DB","d_duration":"10 days","d_start":"Mon 06-11-17","d_end":"Fri 17-11-17"},
+			{"d_task":"Data quality ","d_duration":"10 days","d_start":"Mon 06-11-17","d_end":"Fri 17-11-17"},
+			{"d_task":"Data filters","d_duration":"10 days","d_start":"Mon 06-11-17","d_end":"Fri 17-11-17"},
+			{"d_task":"Application of Business rules","d_duration":"10 days","d_start":"Mon 06-11-17","d_end":"Fri 17-11-17"},
+			{"d_task":"Data Housekeeping","d_duration":"10 days","d_start":"Mon 06-11-17","d_end":"Fri 17-11-17"}
+		];
+		for (var i = 0; i < portlet_padu_upcomingtask_data.length; i++) {
+			var a = portlet_padu_upcomingtask_data[i];
+			pud_data1 = a.d_task;
+			pud_data2 = a.d_duration;
+			pud_data3 = a.d_start;
+			pud_data4 = a.d_end;
+			
+			pud_compile = '<tr><td class="">'+pud_data1+'</td><td class="set_center">'+pud_data2+'</td><td class="set_center">'+pud_data3+'</td><td class="set_center">'+pud_data4+'</td></tr>';
+			$('.portlet_padu_upcomingtask tbody').append(pud_compile);
+		}
+	});
+</script>-->
