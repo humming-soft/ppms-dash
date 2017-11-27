@@ -23,7 +23,9 @@
 					<thead>
 						<tr>
 							<th class="col_separation">Date</th>
-							<th class="col_separation ">Issue and Mitigation</th>
+							<th class="col_separation ">Issue</th>
+							<th class="col_separation ">Mitigation</th>
+							<th class="col_separation ">Resolve</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -34,8 +36,13 @@
 									<tr>
 										<td class=""><%=(typeof(data.data.value[i][0]) !=="undefined")? data.data.value[i][0] : "-"%></td>
 										<td class=""><%=(typeof(data.data.value[i][1]) !=="undefined")? data.data.value[i][1] : "-"%></td>
+										<td class=""><%=(typeof(data.data.value[i][2]) !=="undefined")? data.data.value[i][2] : "-"%></td>
+
+										<td class="set_center"><button type="button" class="btn btn-primary resolve-btn">Resolve</button></td>
 									</tr>
-									<%} } else {  %>
+
+									<%} %>
+					<%} else {  %>
 									<tr>
 										<td colspan="4" class="set_center">Nil</td>
 									</tr>
@@ -45,6 +52,9 @@
 						<td colspan="4" class="set_center">Nil</td>
 					</tr>
 					<% } %>
+
+
+
 				</tbody>
 				</table>
 			</div>
@@ -86,27 +96,11 @@
 	}
 </style>
 
-<!--
+
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('.portlet_padu_issuemitigation .portlet_title .title').html('Issue and Mitigation');
-		
-		var portlet_padu_issuemitigation_data = [
-			{"d_date":"-","d_issue":"-"},
-			{"d_date":"-","d_issue":"-"},
-			{"d_date":"-","d_issue":"-"},
-			{"d_date":"-","d_issue":"-"},
-			{"d_date":"-","d_issue":"-"},
-			{"d_date":"-","d_issue":"-"},
-			{"d_date":"-","d_issue":"-"}
-		];
-		for (var i = 0; i < portlet_padu_issuemitigation_data.length; i++) {
-			var a = portlet_padu_issuemitigation_data[i];
-			pud_data1 = a.d_date;
-			pud_data2 = a.d_issue;
-			
-			pud_compile = '<tr><td class="">'+pud_data1+'</td><td class="">'+pud_data2+'</td></tr>';
-			$('.portlet_padu_issuemitigation tbody').append(pud_compile);
-		}
+		$('.resolve-btn').click(function () {
+			$(this).closest ('tr').remove ();
+		});
 	});
-</script>-->
+</script>

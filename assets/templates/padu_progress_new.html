@@ -1,69 +1,60 @@
-<div class="col-md-12 portlet portlet_padu_progress">
+<div class="col-xs-12 col-sm-12 col-md-12 portlet portlet_padu_progress">
 	<div class="row content">
-		<div class="col-md-12 portlet_title">
+		<div class="col-xs-12 col-sm-12 col-md-12 portlet_title">
 			<i class="fa_title_icon fa fa-hourglass" aria-hidden="true"></i>
-			<span class="title">
-				<% if (typeof(data.data) !== "undefined") { %>
-			<% if (typeof(data.data.date) !== "undefined") { %>
-			<%=data.title%> <span class="plate_asof">(As of : <%=data.data.date%>) </span>
-			<% } else {%>
-			<%=data.title%>
-			<% }}else {%>
-			<%=data.title%>
-			<% }%>
-			</span>
-
+			<span class="title"></span>
+			<span class="plate_asof"></span>
 		</div>
-		<div class="col-md-12 portlet_content portlet_progress pl0">
+		<div class="col-xs-12 col-sm-12 col-md-12 portlet_content portlet_progress pl0">
 			<div class="row">
-				<div class="col-sm-5 col-md-5 portlet_progress_data">
+				<div class="col-xs-5 col-sm-5 col-md-5 portlet_progress_data">
 					<div class="row ml0">
 						<div class="col-md-12 item psd_data_type1">
-							<span class="item_title">Early</span>
-							<span class="item_value iv_early"><%=(typeof data.data.currentEarly == 'undefined')?'0%':data.data.currentEarly%></span>
+							<span class="item_title">Planned</span>
+							<span class="item_value iv_planned"></span>
 						</div>
 						<div class="col-md-12 item psd_data_type1">
 							<span class="item_title">Actual</span>
-							<span class="item_value iv_actual"><%=(typeof data.data.currentActual == 'undefined')?'0%':data.data.currentActual%></span>
+							<span class="item_value iv_actual"></span>
 						</div>
 						<div class="col-md-12 item psd_data_type1">
 							<span class="item_title">Late</span>
-							<span class="item_value iv_late"><%=(typeof data.data.currentLate == 'undefined')?'0%':data.data.currentLate%></span>
+							<span class="item_value iv_late"></span>
 						</div>
 						<div class="col-md-12 item psd_data_type2">
 							<span class="item_title">Variance</span>
 							<div class="">
 								<div class="col-md-6 item">
-									<span class="item_title_variance">Early</span>
-									<span class="item_value_variance_early iv_early_variance"><%=(typeof data.data.varEarly == 'undefined')?'0%':data.data.varEarly%></span>
+									<span class="item_title_variance">Planned</span>
+									<span class="item_value_variance iv_planned_variance"></span>
 								</div>
 								<div class="col-md-6 item">
 									<span class="item_title_variance">Late</span>
-									<span class="item_value_variance_late iv_late_variance"><%=(typeof data.data.varLate == 'undefined')?'0%':data.data.varLate%></span>
+									<span class="item_value_variance iv_late_variance"></span>
 								</div>
 							</div>
 							<br><br><br>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-7 col-md-7">
+				<div class="col-xs-7 col-sm-7 col-md-7">
 					<div class="donut">
 						<div class="donut_label">
-								<div class="dl_planned">
-									<div class="dl_planned_line"></div>
-									<div class="dl_planned_title">planned</div>
-									<div class="dl_planned_value"><%=(typeof data.data.currentEarly == 'undefined')?'0%':data.data.currentEarly%></div>
-								</div>
-								<div class="dl_late">
-									<div class="dl_late_line"></div>
-									<div class="dl_late_title">Late</div>
-									<div class="dl_late_value"><%=(typeof data.data.currentEarly == 'undefined')?'0%':data.data.currentLate%></div>
-								</div>
-								<div class="dl_actual">
-									<div class="dl_actual_line"></div>
-									<div class="dl_actual_title">Actual</div>
-									<div class="dl_actual_value"><%=(typeof data.data.currentActual == 'undefined')?'0%':data.data.currentActual%></div>
-								</div>
+							<div class="dl_planned">
+								<div class="dl_planned_line"></div>
+								<div class="dl_planned_title">planned</div>
+								<div class="dl_planned_value">100%</div>
+							</div>
+							<div class="dl_late">
+								<div class="dl_late_line"></div>
+								<div class="dl_late_title">Late</div>
+								<div class="dl_late_value">100%</div>
+							</div>
+							<div class="dl_actual">
+								<div class="dl_actual_line"></div>
+								<div class="dl_actual_title">Actual</div>
+								<div class="dl_actual_value">100%</div>
+							</div>
 						</div>
 						<div id="padu_donut"></div>
 					</div>
@@ -177,10 +168,10 @@
 
 
 	/*donut*/
-
+	
 	div.donut {
 	}
-
+	
 	div.portlet_padu_progress #padu_donut {
 		position: absolute !important;
 		left: 50% !important;
@@ -191,7 +182,7 @@
 		position: absolute !important;
 		left: -50% !important;
 	}
-
+	
 	div.portlet_padu_progress .donut_label_1 .title {
 		top: 10px !important;
 	}
@@ -199,10 +190,10 @@
 		top: 20px !important;
 		font-size: 2em !important;
 	}
-
-
+	
+	
 	/*donut label*/
-
+	
 	div.portlet_padu_progress div.donut_label {
 		position: absolute !important;
 		left: 50% !important;
@@ -217,101 +208,96 @@
 		color: #9f3 !important;
 		text-align: left;
 	}
-	div.portlet_padu_progress div.donut_label .dl_planned .dl_planned_line {
-		position: absolute !important;
-		left: 76px !important;
-		width: 12px !important;
-		height: 67px !important;
-		border-right: 1px solid #9f3 !important;
-		border-bottom: 1px solid #9f3 !important;
-	}
-	div.portlet_padu_progress div.donut_label .dl_planned .dl_planned_title {
-		position: absolute !important;
-		width: 150px !important;
-		left: 100px;
-		font-size: .8em !important;
-	}
-	div.portlet_padu_progress div.donut_label .dl_planned .dl_planned_value {
-		position: absolute !important;
-		width: 150px !important;
-		top: 10px !important;
-		left: 100px;
-		font-size: 2em !important;
-	}
-
+		div.portlet_padu_progress div.donut_label .dl_planned .dl_planned_line {
+			position: absolute !important;
+			left: 76px !important;
+			width: 12px !important;
+			height: 67px !important;
+			border-right: 1px solid #9f3 !important;
+			border-bottom: 1px solid #9f3 !important;
+		}
+		div.portlet_padu_progress div.donut_label .dl_planned .dl_planned_title {
+			position: absolute !important;
+			width: 150px !important;
+			left: 100px;
+			font-size: .8em !important;
+		}
+		div.portlet_padu_progress div.donut_label .dl_planned .dl_planned_value {
+			position: absolute !important;
+			width: 150px !important;
+			top: 10px !important;
+			left: 100px;
+			font-size: 2em !important;
+		}
+	
 	div.portlet_padu_progress div.donut_label .dl_late {
 		position: absolute !important;
 		top: 15px !important;
 		color: #f59 !important;
 		text-align: right;
 	}
-	div.portlet_padu_progress div.donut_label .dl_late .dl_late_line {
-		position: absolute !important;
-		left: 65px !important;
-		width: 12px !important;
-		height: 76px !important;
-		border-left: 1px solid #f59 !important;
-		border-bottom: 1px solid #f59 !important;
-	}
-	div.portlet_padu_progress div.donut_label .dl_late .dl_late_title {
-		position: absolute !important;
-		width: 150px !important;
-		left: -100px;
-		font-size: .8em !important;
-	}
-	div.portlet_padu_progress div.donut_label .dl_late .dl_late_value {
-		position: absolute !important;
-		width: 150px !important;
-		top: 10px !important;
-		left: -100px;
-		font-size: 2em !important;
-	}
-
+		div.portlet_padu_progress div.donut_label .dl_late .dl_late_line {
+			position: absolute !important;
+			left: 65px !important;
+			width: 12px !important;
+			height: 76px !important;
+			border-left: 1px solid #f59 !important;
+			border-bottom: 1px solid #f59 !important;
+		}
+		div.portlet_padu_progress div.donut_label .dl_late .dl_late_title {
+			position: absolute !important;
+			width: 150px !important;
+			left: -100px;
+			font-size: .8em !important;
+		}
+		div.portlet_padu_progress div.donut_label .dl_late .dl_late_value {
+			position: absolute !important;
+			width: 150px !important;
+			top: 10px !important;
+			left: -100px;
+			font-size: 2em !important;
+		}
+	
 	div.portlet_padu_progress div.donut_label .dl_actual {
 		position: absolute !important;
 		top: 160px !important;
 		color: #0cf !important;
 		text-align: center;
 	}
-	div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_line {
-		position: absolute !important;
-		left: 75px !important;
-		bottom: 0px !important;
-		width: 4px !important;
-		height: 64px !important;
-		background: #0cf !important;
-	}
-	div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_title {
-		position: absolute !important;
-		width: 150px !important;
-		font-size: 1em !important;
-	}
-	div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_value {
-		position: absolute !important;
-		width: 150px !important;
-		top: 10px !important;
-		font-size: 2em !important;
-	}
-	@media print {
-		html div.highcharts-container svg g text {
-			fill: #000 !important;
+		div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_line {
+			position: absolute !important;
+			left: 75px !important;
+			bottom: 0px !important;
+			width: 4px !important;
+			height: 64px !important;
+			background: #0cf !important;
 		}
-	}
-
-
+		div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_title {
+			position: absolute !important;
+			width: 150px !important;
+			font-size: 1em !important;
+		}
+		div.portlet_padu_progress div.donut_label .dl_actual .dl_actual_value {
+			position: absolute !important;
+			width: 150px !important;
+			top: 10px !important;
+			font-size: 3em !important;
+		}
+		
+	
 </style>
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		/*$('.portlet_padu_progress .portlet_title .title').html('Progress Overview');
-
-
+		$('.portlet_padu_progress .portlet_title .title').html('Progress Overview');
+		
+		
 		var portlet_padu_progress_planned = 71;
 		var portlet_padu_progress_actual = 58;
 		var portlet_padu_progress_late = 69;
 		var portlet_padu_progress_variance_planned = portlet_padu_progress_actual-portlet_padu_progress_planned;
 		var portlet_padu_progress_variance_late = portlet_padu_progress_actual-portlet_padu_progress_late;
-
+		
 		$('.portlet_padu_progress .item_value.iv_planned').html(portlet_padu_progress_planned+'%');
 		$('.portlet_padu_progress .item_value.iv_actual').html(portlet_padu_progress_actual+'%');
 		$('.portlet_padu_progress .item_value.iv_late').html(portlet_padu_progress_late+'%');
@@ -320,7 +306,7 @@
 		$('.portlet_padu_progress .dl_planned_value').html(portlet_padu_progress_planned+'%');
 		$('.portlet_padu_progress .dl_late_value').html(portlet_padu_progress_late+'%');
 		$('.portlet_padu_progress .dl_actual_value').html(portlet_padu_progress_actual+'%');
-
+		
 		Highcharts.chart('padu_donut', {
 			chart: {
 				type: 'pie'
@@ -395,12 +381,12 @@
 				enabled: false
 			}
 		});
-*/
-
-
-
-
-
-
+		
+		
+		
+		
+		
+		
+		
 	});
 </script>

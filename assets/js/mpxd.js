@@ -56,7 +56,8 @@ mpxd.templateURLs = {
 	"padu_scurve" : {"templateURL": "assets/templates/padu_scurve.html"},
 	"padu_projectcost" : {"templateURL": "assets/templates/padu_projectcost.html"},
 	"padu_progress" : {"templateURL": "assets/templates/padu_progress.html"},
-	"padu_wbs" : {"templateURL": "assets/templates/padu_wbs.html"}
+	"padu_wbs" : {"templateURL": "assets/templates/padu_wbs.html"},
+	"padu_parking":{"templateURL": "assets/templates/padu_parking_lot.html"}
 }
 
 mpxd.templateData = {};

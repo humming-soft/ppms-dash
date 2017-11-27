@@ -878,6 +878,7 @@ mpxd.modules.progress.ProgressView = Backbone.View.extend({
         var html = mpxd.getTemplate("progress");
         var currentProgress = parseFloat((typeof that.data.data.currentActual == "undefined")?0:that.data.data.currentActual);
 		var currentEarly = parseFloat((typeof that.data.data.currentEarly == "undefined")?0:that.data.data.currentEarly);
+		var currentLate = parseFloat((typeof that.data.data.currentLate == "undefined")?0:that.data.data.currentLate);
         var remainingProgress = 100 - currentProgress;
         template = _.template(html, {data: that.data});
         that.$el.html(template);
@@ -923,9 +924,9 @@ mpxd.modules.progress.ProgressView = Backbone.View.extend({
 					distance: -30
 				}
 			}, {
-				name: 'Early',
+				name: 'Planned',
 				colors: ['#9f3','rgba(0,255,100,.075)'],
-				data: [currentEarly,100-currentEarly],
+				data: [currentProgress,100-currentEarly],
 				size: '80%',
 				innerSize: '95%',
 				dataLabels: {
@@ -935,10 +936,21 @@ mpxd.modules.progress.ProgressView = Backbone.View.extend({
 				}
 			}, {
 				name: 'Late',
+				colors: ['#f59','rgba(0,255,100,.075)'],
+				data: [currentProgress,100-currentLate],
+				size: '73%',
+				innerSize: '95%',
+				dataLabels: {
+					formatter: function() {
+						return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +'%'  : null;
+					}
+				}
+			}, {
+				name: 'Actual',
 				colors: ['#0cf','rgba(0,100,255,.075)'],
 				data: [currentProgress,100-currentProgress],
-				size: '73%',
-				innerSize: '85%',
+				size: '66%',
+				innerSize: '75%',
 				dataLabels: {
 					formatter: function() {
 						return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +'%'  : null;
