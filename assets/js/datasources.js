@@ -35,6 +35,10 @@ mpxd.constructors.padu_wbs = function(data) {
     var el = "#portlet_" + data.id;
     return new mpxd.modules.ppms.wbs({data: data, el: el});
 }
+mpxd.constructors.padu_parking = function(data) {
+    var el = "#portlet_" + data.id;
+    return new mpxd.modules.ppms.parking({data: data, el: el});
+}
 mpxd.modules.ppms.progress = Backbone.View.extend({
     initialize: function (options) {
         this.data = options.data;
@@ -150,6 +154,19 @@ mpxd.modules.ppms.latetask = Backbone.View.extend({
     }
 });
 mpxd.modules.ppms.issuemitigation = Backbone.View.extend({
+    initialize: function (options) {
+        this.data = options.data;
+        this.render();
+    }, render: function () {
+        var that = this;
+        var html = mpxd.getTemplate(that.data.type);
+        template = _.template(html, {data: that.data});
+        that.$el.html(template);
+        that.$el.find('.portlet_content').css({"height":(that.$el.find('.content').parent().parent().parent().height())-40});
+        that.$el.find('.portlet_content').mCustomScrollbar({theme:"dark-3"});
+    }
+});
+mpxd.modules.ppms.parking = Backbone.View.extend({
     initialize: function (options) {
         this.data = options.data;
         this.render();

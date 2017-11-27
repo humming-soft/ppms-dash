@@ -1,0 +1,50 @@
+<div class="col-md-12 portlet portlet_issuemitigation">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-calendar-check-o" aria-hidden="true"></i>
+			<span class="title"></span>
+			<span class="plate_asof"></span>
+		</div>
+		<div class="col-md-12 portlet_content">
+			<div class=" height_x1">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="col_separation">Date</th>
+							<th class="col_separation ">Issue and Mitigation</th>
+							<th class="col_separation" style="text-align:center;">Resolve</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('.portlet_issuemitigation .portlet_title .title').html('Issue and Mitigation');
+	
+	
+	var portlet_issuemitigation_data = [
+		{"d_date":"-","d_issue":"-","d_resolve":"-"},
+		{"d_date":"-","d_issue":"-","d_resolve":"-"},
+		{"d_date":"-","d_issue":"-","d_resolve":"-"},
+		{"d_date":"-","d_issue":"-","d_resolve":"-"}
+	];
+	for (var i = 0; i < portlet_issuemitigation_data.length; i++) {
+		var a = portlet_issuemitigation_data[i];
+		var pud_data1 = a.d_date;
+		var pud_data2 = a.d_issue;
+		var pud_data3 = a.d_resolve;
+		
+		pud_compile = '<tr><td class="">'+pud_data1+'</td><td class="">'+pud_data2+'</td><td class="set_center"><input type="checkbox" value=""></td></tr>';
+		$('.portlet_issuemitigation tbody').append(pud_compile);
+		
+		if (i == portlet_issuemitigation_data.length - 1) {
+			pud_tbody_footer = '<tr style="background:rgba(0,0,0,.35);border:2px solid #000;"><td></td><td></td><td class="set_center"><button type="button" class="btn btn-primary">Resolve</button></td></tr>'
+			$('.portlet_issuemitigation tbody').append(pud_tbody_footer);
+		}
+		
+	}
+</script>

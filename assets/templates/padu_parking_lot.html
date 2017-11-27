@@ -1,0 +1,130 @@
+<div class="col-md-12 portlet portlet_parking_lot">
+	<div class="row content">
+		<div class="col-md-12 portlet_title">
+			<i class="fa_title_icon fa fa-calendar-check-o" aria-hidden="true"></i>
+			<% if (typeof(data.data) !== "undefined") { %>
+			<% if (typeof(data.data.date) !== "undefined") { %>
+			<% if ((data.data.date).length > 0) { %>
+			<%=data.title%> <span class="plate_asof">(As of : <%=data.data.date%>) </span>
+			<% } else {%>
+			<%=data.title%>
+			<%} } else {%>
+			<%=data.title%>
+			<% }}else {%>
+			<%=data.title%>
+			<% }%>
+		</div>
+		<div class="col-md-12 portlet_content">
+			<div class=" height_x1">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="col-sm-1 col-md-1 col_separation">Date Raised</th>
+							<th class="col-sm-1 col-md-1 col_separation">Raised By</th>
+							<th class="col-sm-6 col-md-5 col_separation">Issues</th>
+							<th class="col-sm-1 col-md-1 col_separation">Part Of Scope?(Y/N)</th>
+							<th class="col-sm-4 col-md-3 col_separation">Agreed Action</th>
+							<th class="col-sm-2 col-md-3 col_separation">Remarks</th>
+						</tr>
+					</thead>
+					<tbody>
+					<% if (typeof(data.data.value) !== 'undefined') {
+					if (typeof(data.data.value[0]) !== 'undefined') {
+					for(var i=0; i<(data.data.value).length; i++){%>
+					<tr>
+						<td class=""><%=(typeof(data.data.value[i][0]) !=="undefined")? data.data.value[i][0] : "-"%></td>
+
+						<td class="set_center"><%=(typeof(data.data.value[i][1]) !=="undefined")? data.data.value[i][1] : "-"%></td>
+						<% if ((data.data.value[i][0]).length ==0 ) {%>
+						<td class="" style="font-size: 110%"><b><%=(typeof(data.data.value[i][2]) !=="undefined")? data.data.value[i][2] : "-"%></b></td>
+						<td class="set_center"><%=(typeof(data.data.value[i][3]) !=="undefined")? data.data.value[i][3] : "-"%></td>
+						<td class=""><%=(typeof(data.data.value[i][4]) !=="undefined")? data.data.value[i][4] : "-"%></td>
+						<td class=""><%=(typeof(data.data.value[i][5]) !=="undefined")? data.data.value[i][5] : "-"%></td>
+						<% } else { %>
+						<td class=""><b>&nbsp;&nbsp;&nbsp;</b><%=(typeof(data.data.value[i][2]) !=="undefined")? data.data.value[i][2] : "-"%></td>
+						<td class="set_center"><%=(typeof(data.data.value[i][3]) !=="undefined")? data.data.value[i][3] : "-"%></td>
+						<td class=""><%=(typeof(data.data.value[i][4]) !=="undefined")? data.data.value[i][4] : "-"%></td>
+						<td class=""><%=(typeof(data.data.value[i][5]) !=="undefined")? data.data.value[i][5] : "-"%></td>
+						<% } %>
+
+					</tr>
+					<%} } else {  %>
+					<tr>
+						<td colspan="6" class="set_center">Nil</td>
+					</tr>
+					<% }%>
+					<% } else {%>
+					<tr>
+						<td colspan="6" class="set_center">Nil</td>
+					</tr>
+					<% } %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	/*
+	portlet_parking_lot
+
+	*/
+	div.portlet_parking_lot div.content {
+		background: #252237;
+	}
+	div.portlet_parking_lot div.portlet_content {
+		padding-top: 10px;
+	}
+	div.portlet_parking_lot div.portlet_title {
+		color: #fff;
+	}
+
+	div.portlet_parking_lot thead {
+		background: #111;
+	}
+
+	div.portlet_parking_lot table {
+		font-size: .9em;
+	}
+
+	/*theader border*/
+	div.portlet_parking_lot table th {
+		border-bottom: 1px solid #000 !important;
+		font-weight: normal;
+	}
+	div.portlet_parking_lot table .col_separation {
+		border-right: 2px solid #223;
+	}
+
+	/*tbody border*/
+	div.portlet_parking_lot table tbody td {
+		border-bottom: 1px solid #669 !important;
+	}
+</style>
+
+<script type="text/javascript">
+	/*$('.portlet_parking_lot .portlet_title .title').html('Parking Lot');
+	
+	var portlet_parking_lot_data = [
+		{"d_task":"10-10-2017","d_duration":"PG","d_start":"PAJSKM (PAJSK/SEGAK)","d_end":"Fri 13-10-17","d_parking_lot":"Tue 21-11-17"},
+
+	];*/
+/*	for (var i = 0; i < portlet_parking_lot_data.length; i++) {
+		var a = portlet_parking_lot_data[i];
+		pud_data1 = a.d_task;
+		pud_data2 = a.d_duration;
+		pud_data3 = a.d_start;
+		pud_data4 = a.d_end;
+		pud_data5 = a.d_parking_lot;*/
+		
+		/*pud_compile = '<tr>' +
+				'<td >'+pud_data1+'</td>' +
+				'<td >'+pud_data2+'</td>' +
+				'<td >'+pud_data3+'</td>' +
+				'<td >'+pud_data4+'</td>' +
+				'<td >'+pud_data5+'</td>' +
+				'<td >'+pud_data5+'</td></tr>';
+		$('.portlet_parking_lot tbody').append(pud_compile);
+	}*/
+</script>

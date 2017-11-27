@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'live';
+$active_group = 'postgre';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -99,7 +99,7 @@ $db['postgre'] = array(
 	'hostname' => 'localhost',
 	'username' => 'postgres',
 	'password' => 'summersoft123',
-	'database' => 'PPMS',
+	'database' => 'PPMS_NEW',
 	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
