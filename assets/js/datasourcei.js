@@ -322,7 +322,7 @@ mpxd.modules.scurve.ScurveView2 = Backbone.View.extend({
             },
 
             series: [{
-                name: 'Early',
+                name: 'Planned',
                 color:'#0f0',
                 data: that.data.earlyData
             }, {
